@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>大沈堂・元本圖｜彭秋龍</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@400;600;700;900&display=swap');
+
+    :root {
+      --background:#EFEAE5;
+      --paper:#FCF9F5;
+      --white:#FFFFFF;
+      --ink:#3E3732;
+      --muted:#796F68;
+      --line:#D9CFC6;
+      --gold:#B39468;
+      --gold-dark:#795A34;
+      --gold-light:#F1E6D2;
+      --rose:#A87979;
+      --rose-light:#F3E2E0;
+      --sage:#788B78;
+      --sage-light:#E1EBDF;
+      --blue:#708494;
+      --blue-light:#E0E8EE;
+      --violet:#897D98;
+      --violet-light:#E8E3EE;
+      --green:#537860;
+      --green-light:#DDEBE0;
+    }
+
+    * {
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html {
+      width:100%;
+      -webkit-text-size-adjust:100%;
+      text-size-adjust:100%;
+    }
+
+    body {
+      width:100%;
+      min-height:100vh;
+      padding:24px 12px;
+      overflow-x:hidden;
+      color:var(--ink);
+      background:var(--background);
+      font-family:"Noto Sans TC",sans-serif;
+      font-size:12pt;
+      line-height:1.8;
+    }
+
+    img,
+    svg,
+    table {
+      max-width:100%;
+    }
+
+    .page {
+      position:relative;
+      width:min(210mm, calc(100vw - 24px));
+      min-height:297mm;
+      margin:0 auto 24px;
+      padding:11mm 12mm;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at top right, rgba(179,148,104,.08), transparent 30%),
+        var(--paper);
+      border-radius:4px;
+      box-shadow:0 6px 32px rgba(62,55,50,.13);
+    }
+
+    .page-break {
+      break-after:page;
+      page-break-after:always;
+    }
+
+    .header {
+      margin-bottom:10px;
+      padding-bottom:9px;
+      border-bottom:1.5px solid var(--gold);
+      text-align:center;
+    }
+
+    .brand {
+      color:var(--gold-dark);
+      font-family:"Noto Serif TC",serif;
+      font-size:11px;
+      font-weight:600;
+      letter-spacing:5px;
+    }
+
+    .title {
+      margin-top:2px;
+      color:var(--ink);
+      font-family:"Noto Serif TC",serif;
+      font-size:24px;
+      font-weight:900;
+      line-height:1.4;
+      letter-spacing:7px;
+    }
+
+    .subtitle {
+      margin-top:5px;
+      color:var(--muted);
+      font-size:11pt;
+      letter-spacing:1.5px;
+    }
+
+    .slogan {
+      margin-top:4px;
+      color:var(--gold);
+      font-family:"Noto Serif TC",serif;
+      font-size:10px;
+      letter-spacing:3px;
+    }
+
+    .intro {
+      margin:7px 0 10px;
+      padding:8px 12px;
+      color:var(--muted);
+      background:rgba(255,255,255,.65);
+      border:1px solid var(--line);
+      border-radius:8px;
+      font-size:10.5pt;
+      line-height:1.8;
+      text-align:center;
+    }
+
+    .section {
+      margin-top:10px;
+      padding:11px 12px;
+      background:rgba(255,255,255,.92);
+      border:1px solid var(--line);
+      border-left:4px solid var(--gold);
+      border-radius:9px;
+    }
+
+    .section.rose {
+      border-left-color:var(--rose);
+    }
+
+    .section.sage {
+      border-left-color:var(--sage);
+    }
+
+    .section.blue {
+      border-left-color:var(--blue);
+    }
+
+    .section.violet {
+      border-left-color:var(--violet);
+    }
+
+    .section.green {
+      border-left-color:var(--green);
+    }
+
+    .section-title {
+      margin-bottom:7px;
+      padding-bottom:6px;
+      color:var(--ink);
+      border-bottom:1px solid var(--line);
+      font-family:"Noto Serif TC",serif;
+      font-size:14px;
+      font-weight:900;
+      line-height:1.5;
+      letter-spacing:2px;
+      text-align:center;
+    }
+
+    .section-desc {
+      margin-bottom:8px;
+      color:var(--muted);
+      font-size:10.5pt;
+      line-height:1.8;
+      text-align:center;
+    }
+
+     
+    .map {
+      position:relative;
+      padding:12px 10px;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at center, rgba(179,148,104,.14), transparent 42%),
+        linear-gradient(180deg,#FFFDF9,#F7F0E8);
+      border:1px solid var(--gold);
+      border-radius:12px;
+    }
+
+    .map::before,
+    .map::after {
+      content:"";
+      position:absolute;
+      left:50%;
+      z-index:0;
+      width:1px;
+      height:72%;
+      top:14%;
+      background:linear-gradient(transparent,var(--gold),transparent);
+      opacity:.35;
+    }
+
+    .map::after {
+      width:72%;
+      height:1px;
+      left:14%;
+      top:50%;
+    }
+
+    .map-layer {
+      position:relative;
+      z-index:1;
+    }
+
+    .stage-grid {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:8px;
+    }
+
+    .stage {
+      min-width:0;
+      padding:9px 6px;
+      border:1.5px solid;
+      border-radius:9px;
+      text-align:center;
+    }
+
+    .stage.work {
+      color:#355039;
+      background:var(--sage-light);
+      border-color:var(--sage);
+    }
+
+    .stage.career {
+      color:#62491E;
+      background:var(--gold-light);
+      border-color:var(--gold);
+    }
+
+    .stage.family {
+      color:#324755;
+      background:var(--blue-light);
+      border-color:var(--blue);
+    }
+
+    .stage-age {
+      font-size:9.5px;
+      font-weight:700;
+      letter-spacing:.5px;
+    }
+
+    .stage-name {
+      margin-top:2px;
+      font-family:"Noto Serif TC",serif;
+      font-size:11px;
+      font-weight:900;
+    }
+
+    .stage-number {
+      margin-top:2px;
+      font-family:"Noto Serif TC",serif;
+      font-size:26px;
+      font-weight:900;
+      line-height:1.15;
+    }
+
+    .core-wrap {
+      display:flex;
+      justify-content:center;
+      margin:12px 0;
+    }
+
+    .core-circle {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      width:108px;
+      height:108px;
+      color:var(--gold-dark);
+      background:
+        radial-gradient(circle,#FFFDF8 0%,#F1E4CF 70%,#E3CDAA 100%);
+      border:3px double var(--gold);
+      border-radius:50%;
+      box-shadow:0 4px 18px rgba(121,90,52,.15);
+      text-align:center;
+    }
+
+    .core-label {
+      font-family:"Noto Serif TC",serif;
+      font-size:11px;
+      font-weight:900;
+      letter-spacing:2px;
+    }
+
+    .core-number {
+      font-family:"Noto Serif TC",serif;
+      font-size:38px;
+      font-weight:900;
+      line-height:1.12;
+    }
+
+    .core-note {
+      color:var(--muted);
+      font-size:8.5px;
+      letter-spacing:1px;
+    }
+
+    .inner-grid {
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:7px;
+    }
+
+    .inner-item {
+      min-width:0;
+      padding:8px 5px;
+      background:rgba(255,255,255,.86);
+      border:1px solid var(--line);
+      border-radius:8px;
+      text-align:center;
+    }
+
+    .inner-item.focus {
+      background:var(--green-light);
+      border:2px solid var(--green);
+    }
+
+    .inner-name {
+      color:var(--muted);
+      font-size:9.5px;
+      font-weight:700;
+    }
+
+    .inner-number {
+      color:var(--violet);
+      font-family:"Noto Serif TC",serif;
+      font-size:23px;
+      font-weight:900;
+      line-height:1.2;
+    }
+
+    .inner-item.focus .inner-number {
+      color:var(--green);
+    }
+
+    .inner-note {
+      margin-top:2px;
+      color:var(--muted);
+      font-size:8.5px;
+    }
+
+     
+    .combo-grid {
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:6px;
+    }
+
+    .combo-item {
+      min-width:0;
+      padding:7px 6px;
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:7px;
+      text-align:center;
+    }
+
+    .combo-item .cn {
+      color:var(--gold-dark);
+      font-size:10px;
+      font-weight:900;
+    }
+
+    .combo-item .cv {
+      color:var(--violet);
+      font-family:"Noto Serif TC",serif;
+      font-size:17px;
+      font-weight:900;
+      line-height:1.3;
+    }
+
+    .combo-item .cd {
+      color:var(--muted);
+      font-size:9.5px;
+      line-height:1.5;
+    }
+
+    .combo-item .ce {
+      margin-top:4px;
+      padding-top:4px;
+      color:var(--ink);
+      border-top:1px dashed var(--line);
+      font-size:10pt;
+      line-height:1.7;
+      text-align:left;
+    }
+
+     
+    .combo-item .cf,
+    .formula,
+    .node-code,
+    .node-formula,
+    .calc-source,
+    .calculation,
+    .source-formula,
+    [data-type="formula"] {
+      display:none !important;
+    }
+
+     
+    .qiqing-grid {
+      display:grid;
+      grid-template-columns:repeat(7,minmax(0,1fr));
+      gap:5px;
+    }
+
+    .qq-item {
+      min-width:0;
+      padding:8px 5px;
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:7px;
+      text-align:center;
+    }
+
+    .qq-item .qn {
+      color:var(--rose);
+      font-size:10px;
+      font-weight:900;
+    }
+
+    .qq-item .qe {
+      color:var(--muted);
+      font-size:9px;
+    }
+
+    .qq-item .qv {
+      color:var(--violet);
+      font-family:"Noto Serif TC",serif;
+      font-size:19px;
+      font-weight:900;
+      line-height:1.2;
+    }
+
+    .qq-item .qp {
+      color:var(--muted);
+      font-size:8.5px;
+    }
+
+    .qq-item .qd {
+      margin-top:4px;
+      padding-top:4px;
+      color:var(--ink);
+      border-top:1px dashed var(--line);
+      font-size:9.5pt;
+      line-height:1.65;
+      text-align:left;
+    }
+
+     
+    .liunian-grid {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:7px;
+    }
+
+    .ln-item {
+      min-width:0;
+      padding:9px 7px;
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:8px;
+      text-align:center;
+    }
+
+    .ln-item.current {
+      background:var(--gold-light);
+      border:2px solid var(--gold);
+    }
+
+    .ln-item .ly {
+      color:var(--muted);
+      font-size:10px;
+      font-weight:700;
+    }
+
+    .ln-item .lv {
+      color:var(--violet);
+      font-family:"Noto Serif TC",serif;
+      font-size:26px;
+      font-weight:900;
+      line-height:1.2;
+    }
+
+    .ln-item.current .lv {
+      color:var(--gold-dark);
+    }
+
+    .ln-item .lf {
+      display:none !important;
+    }
+
+    .ln-item .lk {
+      color:var(--gold-dark);
+      font-size:10px;
+      font-weight:900;
+    }
+
+    .ln-item .ld {
+      margin-top:5px;
+      padding-top:5px;
+      color:var(--ink);
+      border-top:1px dashed var(--line);
+      font-size:10pt;
+      line-height:1.7;
+      text-align:left;
+    }
+
+    .ln-tag {
+      display:inline-block;
+      margin-top:3px;
+      padding:1px 7px;
+      color:#FFFFFF;
+      background:var(--gold);
+      border-radius:10px;
+      font-size:9px;
+    }
+
+     
+    .bagua-layout {
+      display:grid;
+      grid-template-columns:auto minmax(0,1fr);
+      gap:16px;
+      align-items:start;
+    }
+
+    .bagua-grid {
+      display:grid;
+      grid-template-columns:repeat(3,76px);
+      grid-template-rows:repeat(3,76px);
+      gap:5px;
+    }
+
+    .bagua-cell {
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      background:var(--paper);
+      border:1.5px solid var(--line);
+      border-radius:8px;
+      text-align:center;
+    }
+
+    .bagua-cell.missing {
+      background:#FFF1E9;
+      border:2px solid #CF875F;
+    }
+
+    .bagua-cell .bc-num {
+      color:var(--ink);
+      font-family:"Noto Serif TC",serif;
+      font-size:23px;
+      font-weight:900;
+      line-height:1.1;
+    }
+
+    .bagua-cell.missing .bc-num {
+      color:#B85E36;
+    }
+
+    .bagua-cell .bc-circles {
+      margin-top:3px;
+      color:var(--gold);
+      font-size:9px;
+      line-height:1;
+      letter-spacing:1px;
+    }
+
+    .bagua-cell .bc-miss {
+      color:#B85E36;
+      font-size:9px;
+      font-weight:700;
+    }
+
+    .energy-legend {
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:6px;
+      margin-bottom:8px;
+    }
+
+    .energy-level {
+      padding:6px 8px;
+      border-radius:6px;
+      font-size:9.5px;
+      line-height:1.6;
+    }
+
+    .level-strong {
+      color:#5E4824;
+      background:var(--gold-light);
+      border:1px solid var(--gold);
+    }
+
+    .level-develop {
+      color:#814728;
+      background:#FFF1E9;
+      border:1px solid #CF875F;
+    }
+
+    .bagua-feature-grid {
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+    }
+
+    .bagua-feature-item {
+      padding:7px 9px;
+      background:#FBF8F4;
+      border:1px solid var(--line);
+      border-radius:6px;
+      font-size:10pt;
+      line-height:1.7;
+    }
+
+    .bagua-feature-item .bfi-num {
+      margin-right:4px;
+      color:var(--gold-dark);
+      font-family:"Noto Serif TC",serif;
+      font-size:13px;
+      font-weight:900;
+    }
+
+    .bagua-feature-item .bfi-circles {
+      display:none;
+    }
+
+    .bagua-feature-item .bfi-tag {
+      color:var(--violet);
+      font-size:9.5px;
+      font-weight:700;
+    }
+
+    .bagua-feature-item .bfi-desc {
+      margin-top:2px;
+      color:var(--muted);
+    }
+
+    .missing-explain {
+      margin-top:7px;
+      padding:8px 10px;
+      color:#754127;
+      background:#FFF7F2;
+      border:1px solid #CF875F;
+      border-radius:7px;
+      font-size:10pt;
+      line-height:1.75;
+    }
+
+     
+    .report-content {
+      width:100%;
+      min-width:0;
+    }
+
+    .report-card {
+      width:100%;
+      margin:0 0 6mm;
+      padding:5mm 6mm;
+      overflow-wrap:anywhere;
+      background:#FFFFFF;
+      border:1px solid var(--line);
+      border-left:5px solid var(--gold);
+      border-radius:9px;
+      box-shadow:0 2px 9px rgba(62,55,50,.07);
+    }
+
+    .report-card-gold {
+      background:#FFFAF1;
+      border-left-color:var(--gold);
+    }
+
+    .report-card-rose {
+      background:#FFF6F5;
+      border-left-color:var(--rose);
+    }
+
+    .report-card-sage {
+      background:#F5FAF4;
+      border-left-color:var(--sage);
+    }
+
+    .report-card-blue {
+      background:#F4F8FA;
+      border-left-color:var(--blue);
+    }
+
+    .report-card-title {
+      margin:0 0 4mm;
+      padding-bottom:2.5mm;
+      color:var(--gold-dark);
+      border-bottom:1px solid rgba(179,148,104,.4);
+      font-family:"Noto Serif TC",serif;
+      font-size:17pt;
+      font-weight:900;
+      line-height:1.45;
+    }
+
+    .report-card-title::before {
+      content:"✦";
+      margin-right:7px;
+      color:var(--gold);
+    }
+
+    .report-subtitle {
+      margin:4mm 0 2mm;
+      padding-left:3mm;
+      color:#6B5545;
+      border-left:3px solid var(--gold);
+      font-family:"Noto Serif TC",serif;
+      font-size:13pt;
+      font-weight:900;
+    }
+
+    .report-card p {
+      margin:0 0 3.5mm;
+      font-size:12pt;
+      line-height:1.95;
+      text-align:justify;
+      orphans:3;
+      widows:3;
+    }
+
+    .report-card p:last-child {
+      margin-bottom:0;
+    }
+
+    .report-card ul,
+    .report-card ol {
+      margin:2mm 0 4mm;
+      padding-left:1.7em;
+    }
+
+    .report-card li {
+      margin:2mm 0;
+      font-size:12pt;
+      line-height:1.85;
+    }
+
+    .report-card strong {
+      color:#754B37;
+    }
+
+     
+    .carrier-hero {
+      position:relative;
+      padding:20px 18px;
+      overflow:hidden;
+      color:#FFFDF9;
+      background:
+        radial-gradient(circle at top right, rgba(255,255,255,.18), transparent 35%),
+        linear-gradient(135deg,#6E5A43,#9A7B53);
+      border-radius:12px;
+      text-align:center;
+    }
+
+    .carrier-hero::before {
+      content:"✦";
+      position:absolute;
+      top:-28px;
+      right:14px;
+      color:rgba(255,255,255,.11);
+      font-family:"Noto Serif TC",serif;
+      font-size:110px;
+    }
+
+    .carrier-kicker {
+      position:relative;
+      z-index:1;
+      font-size:10px;
+      letter-spacing:4px;
+      opacity:.86;
+    }
+
+    .carrier-name {
+      position:relative;
+      z-index:1;
+      margin-top:6px;
+      font-family:"Noto Serif TC",serif;
+      font-size:25px;
+      font-weight:900;
+      letter-spacing:3px;
+    }
+
+    .carrier-sub {
+      position:relative;
+      z-index:1;
+      margin-top:5px;
+      font-size:10.5pt;
+      letter-spacing:1px;
+      opacity:.9;
+    }
+
+    .carrier-guide {
+      margin-top:10px;
+      padding:14px 16px;
+      color:var(--ink);
+      background:#FFFFFF;
+      border:1px solid var(--line);
+      border-radius:9px;
+      font-size:11.5pt;
+      line-height:1.95;
+      text-align:justify;
+    }
+
+    .morning-box {
+      margin-top:10px;
+      padding:16px;
+      background:
+        radial-gradient(circle at top left, rgba(179,148,104,.13), transparent 35%),
+        #FFFDF9;
+      border:1.5px solid var(--gold);
+      border-radius:11px;
+    }
+
+    .morning-title {
+      color:var(--gold-dark);
+      font-family:"Noto Serif TC",serif;
+      font-size:16px;
+      font-weight:900;
+      letter-spacing:3px;
+      text-align:center;
+    }
+
+    .morning-sub {
+      margin-top:3px;
+      color:var(--muted);
+      font-size:9.5px;
+      letter-spacing:1px;
+      text-align:center;
+    }
+
+    .morning-lines {
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      margin-top:12px;
+    }
+
+    .morning-line {
+      display:grid;
+      grid-template-columns:34px minmax(0,1fr);
+      gap:10px;
+      align-items:center;
+      padding:10px 12px;
+      background:#FFFFFF;
+      border:1px solid var(--line);
+      border-radius:8px;
+    }
+
+    .morning-number {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      width:34px;
+      height:34px;
+      color:#FFFFFF;
+      background:var(--gold);
+      border-radius:50%;
+      font-family:"Noto Serif TC",serif;
+      font-size:15px;
+      font-weight:900;
+    }
+
+    .morning-text {
+      color:var(--ink);
+      font-family:"Noto Serif TC",serif;
+      font-size:12.5pt;
+      font-weight:700;
+      line-height:1.65;
+    }
+
+    .ritual {
+      margin-top:10px;
+      padding:12px 14px;
+      background:var(--sage-light);
+      border:1px solid var(--sage);
+      border-radius:9px;
+    }
+
+    .ritual-title {
+      margin-bottom:6px;
+      color:#405D43;
+      font-family:"Noto Serif TC",serif;
+      font-size:13px;
+      font-weight:900;
+      letter-spacing:2px;
+    }
+
+    .ritual ol {
+      padding-left:1.5em;
+    }
+
+    .ritual li {
+      margin:4px 0;
+      color:#3D513F;
+      font-size:10.5pt;
+      line-height:1.75;
+    }
+
+    .lighthouse {
+      margin-top:12px;
+      padding:13px 16px;
+      color:#5C4934;
+      background:var(--gold-light);
+      border:1px solid var(--gold);
+      border-radius:9px;
+      font-family:"Noto Serif TC",serif;
+      font-size:11.5pt;
+      line-height:1.95;
+      text-align:center;
+    }
+
+    .footer {
+      margin-top:10px;
+      padding-top:7px;
+      color:var(--muted);
+      border-top:1px solid var(--line);
+      font-size:9.5px;
+      line-height:1.8;
+      letter-spacing:.5px;
+      text-align:center;
+    }
+
+    .footer strong {
+      color:var(--gold-dark);
+    }
+
+    @media screen and (max-width:760px) {
+      body {
+        padding:10px 6px;
+        font-size:11pt;
+      }
+
+      .page {
+        width:calc(100vw - 12px);
+        min-height:0;
+        margin-bottom:12px;
+        padding:20px 14px;
+        border-radius:8px;
+      }
+
+      .title {
+        font-size:20px;
+        letter-spacing:5px;
+      }
+
+      .stage-grid {
+        grid-template-columns:1fr;
+      }
+
+      .inner-grid,
+      .combo-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+
+      .qiqing-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+
+      .liunian-grid {
+        grid-template-columns:1fr;
+      }
+
+      .bagua-layout {
+        grid-template-columns:1fr;
+      }
+
+      .bagua-grid {
+        grid-template-columns:repeat(3,minmax(68px,76px));
+        grid-template-rows:repeat(3,72px);
+        justify-content:center;
+      }
+
+      .report-card {
+        padding:18px 15px;
+      }
+
+      .report-card-title {
+        font-size:15pt;
+      }
+
+      .report-card p,
+      .report-card li {
+        font-size:11pt;
+      }
+    }
+
+    @media screen and (max-width:430px) {
+      .page {
+        padding:16px 10px;
+      }
+
+      .inner-grid,
+      .combo-grid,
+      .qiqing-grid,
+      .energy-legend {
+        grid-template-columns:1fr;
+      }
+
+      .morning-line {
+        grid-template-columns:30px minmax(0,1fr);
+        padding:9px;
+      }
+
+      .morning-number {
+        width:30px;
+        height:30px;
+      }
+
+      .morning-text {
+        font-size:11.5pt;
+      }
+    }
+
+    @page {
+      size:A4 portrait;
+      margin:5mm;
+    }
+
+    @media print {
+      html,
+      body {
+        display:block !important;
+        width:auto !important;
+        min-height:0 !important;
+        margin:0 !important;
+        padding:0 !important;
+        overflow:visible !important;
+        background:#FFFFFF !important;
+      }
+
+      .page {
+        display:block !important;
+        width:100% !important;
+        min-width:0 !important;
+        max-width:none !important;
+        min-height:0 !important;
+        margin:0 !important;
+        padding:4mm !important;
+        overflow:visible !important;
+        border-radius:0 !important;
+        box-shadow:none !important;
+      }
+
+      .page-break {
+        break-after:page !important;
+        page-break-after:always !important;
+      }
+
+      .stage-grid {
+        grid-template-columns:repeat(3,1fr) !important;
+      }
+
+      .inner-grid,
+      .combo-grid {
+        grid-template-columns:repeat(4,1fr) !important;
+      }
+
+      .qiqing-grid {
+        grid-template-columns:repeat(7,1fr) !important;
+      }
+
+      .liunian-grid {
+        grid-template-columns:repeat(3,1fr) !important;
+      }
+
+      .bagua-layout {
+        grid-template-columns:auto 1fr !important;
+      }
+
+      .energy-legend {
+        grid-template-columns:repeat(2,1fr) !important;
+      }
+
+      .header,
+      .footer,
+      .stage,
+      .inner-item,
+      .combo-item,
+      .qq-item,
+      .ln-item,
+      .bagua-cell,
+      .bagua-feature-item,
+      .report-card,
+      .carrier-hero,
+      .carrier-guide,
+      .morning-box,
+      .morning-line,
+      .ritual,
+      .lighthouse {
+        break-inside:avoid-page !important;
+        page-break-inside:avoid !important;
+      }
+
+      .section-title,
+      .report-card-title,
+      .report-subtitle,
+      .morning-title {
+        break-after:avoid-page !important;
+        page-break-after:avoid !important;
+      }
+
+      * {
+        -webkit-print-color-adjust:exact !important;
+        print-color-adjust:exact !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div class="page page-break">
+    <header class="header">
+      <div class="brand">大　沈　堂</div>
+      <div class="title">元　本　圖</div>
+      <div class="subtitle">彭秋龍　出生日期：1975年11月10日</div>
+      <div class="slogan">剛　好　是　你</div>
+    </header>
+
+    <div class="intro">
+      元本圖呈現你的生命能量結構。它不是為你貼上標籤，而是幫助你看見自己的天賦、內在需求與生命慣性，在每一次選擇中，更靠近真正的自己。
+    </div>
+
+    <section class="section">
+      <div class="section-title">你　的　生　命　元　本　圖</div>
+
+      <div class="map">
+        <div class="map-layer">
+          <div class="stage-grid">
+            <div class="stage work">
+              <div class="stage-age">21～40歲</div>
+              <div class="stage-name">工作與人際</div>
+              <div class="stage-number">9</div>
+            </div>
+
+            <div class="stage career">
+              <div class="stage-age">41～60歲</div>
+              <div class="stage-name">事業與發展</div>
+              <div class="stage-number">3</div>
+            </div>
+
+            <div class="stage family">
+              <div class="stage-age">60歲以後</div>
+              <div class="stage-name">家庭與豐盛</div>
+              <div class="stage-number">3</div>
+            </div>
+          </div>
+
+          <div class="core-wrap">
+            <div class="core-circle">
+              <div class="core-label">核心性格</div>
+              <div class="core-number">7</div>
+              <div class="core-note">你的生命核心底色</div>
+            </div>
+          </div>
+
+          <div class="inner-grid">
+            <div class="inner-item">
+              <div class="inner-name">潛意識傾向</div>
+              <div class="inner-number"><span style="color:#8C3030;font-weight:900;">11&#9733;</span></div>
+              <div class="inner-note">深層驅動力</div>
+            </div>
+
+            <div class="inner-item">
+              <div class="inner-name">內在需求</div>
+              <div class="inner-number">5</div>
+              <div class="inner-note">真實的內在聲音</div>
+            </div>
+
+            <div class="inner-item">
+              <div class="inner-name">外在展現</div>
+              <div class="inner-number">6</div>
+              <div class="inner-note">與世界互動的方式</div>
+            </div>
+
+            <div class="inner-item focus">
+              <div class="inner-name">生命提醒</div>
+              <div class="inner-number">3</div>
+              <div class="inner-note">需要理解與平衡之處</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section violet">
+      <div class="section-title">十　二　組　聯　合　密　碼</div>
+      <div class="section-desc">
+        十二組聯合密碼呈現你在家庭、關係、工作、選擇與人生發展中的不同面向。每一組都不是限制，而是幫助你理解自己如何感受、回應與前進。
+      </div>
+
+      <div class="combo-grid"><div class="combo-item hi-dust"><div class="cn">1・根本動機</div><div class="cv">1-2-3</div><div class="cd">你做出選擇時的內在出發點</div></div><div class="combo-item hi-dust"><div class="cn">2・根本能量</div><div class="cv">1-3-4</div><div class="cd">你面對生命時的深層能量</div></div><div class="combo-item hi-gold"><div class="cn">3・最深性格</div><div class="cv">3-4-7</div><div class="cd">你最真實的內在底色</div></div><div class="combo-item "><div class="cn">4・工作互動</div><div class="cv">2-3-5</div><div class="cd">你在工作關係中的互動方式</div></div><div class="combo-item "><div class="cn">5・工作行動</div><div class="cv">1-3-4</div><div class="cd">你在工作中的行動傾向</div></div><div class="combo-item "><div class="cn">6・工作與人際</div><div class="cv">4-5-9</div><div class="cd">你建立合作與信任的方式</div></div><div class="combo-item "><div class="cn">7・內在性格</div><div class="cv">4-7-11</div><div class="cd">你內心真正在意的方向</div></div><div class="combo-item "><div class="cn">8・外在性格</div><div class="cv">3-7-1</div><div class="cd">你呈現給外界的行動樣貌</div></div><div class="combo-item "><div class="cn">9・事業發展</div><div class="cv">11-1-3</div><div class="cd">你的事業能量與發展方向</div></div><div class="combo-item "><div class="cn">10・家庭互動</div><div class="cv">1-4-5</div><div class="cd">你在家庭中的互動傾向</div></div><div class="combo-item "><div class="cn">11・家庭支持</div><div class="cv">3-4-7</div><div class="cd">你的安全感與支持方式</div></div><div class="combo-item "><div class="cn">12・家庭與豐盛</div><div class="cv">5-7-3</div><div class="cd">家庭、資源與長期累積方向</div></div></div>
+    </section>
+
+    <section class="section sage">
+      <div class="section-title">人　生　三　階　段</div>
+      <div class="section-desc">
+        不同人生階段有不同的能量重心。理解每個時期的主要方向，能幫助你在適合的時候累積、發展與整合。
+      </div>
+
+      <div class="stage-grid">
+        <div class="stage work">
+          <div class="stage-age">21～40歲</div>
+          <div class="stage-name">工作與人際</div>
+          <div class="stage-number">9</div>
+        </div>
+
+        <div class="stage career">
+          <div class="stage-age">41～60歲</div>
+          <div class="stage-name">事業與發展</div>
+          <div class="stage-number">3</div>
+        </div>
+
+        <div class="stage family">
+          <div class="stage-age">60歲以後</div>
+          <div class="stage-name">家庭與豐盛</div>
+          <div class="stage-number">3</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <strong>大沈堂・元本圖</strong>　剛好是你<br>
+      彭秋龍・1975/11/10　客戶專屬交付版
+    </footer>
+  </div>
+
+  
+  <div class="page page-break">
+    <header class="header">
+      <div class="brand">大　沈　堂</div>
+      <div class="title">元　本　圖</div>
+      <div class="subtitle">彭秋龍　生命能量與年度方向</div>
+      <div class="slogan">看見自己，也看見下一步</div>
+    </header>
+
+    <section class="section rose">
+      <div class="section-title">七　情　能　量</div>
+      <div class="section-desc">
+        情緒不是需要被消滅的問題，而是內在正在傳遞的訊息。理解自己的情緒傾向，能幫助你在感受出現時，更溫柔而清楚地回應自己。
+      </div>
+
+      <div class="qiqing-grid"><div class="qq-item" style="background:#FFF5E8;border-color:#E8A060;"><div class="qn">喜</div><div class="qv" style="color:#C07030;">1</div><div class="qd">喜悅來自開創與第一，你因突破而快樂</div></div><div class="qq-item" style="background:#F5E8E8;border-color:#C07070;"><div class="qn">怒</div><div class="qv" style="color:#A04040;">2</div><div class="qd">憤怒源於不被理解，你對忽視與冷漠極為敏感</div></div><div class="qq-item" style="background:#E8EEF8;border-color:#7090C0;"><div class="qn">哀</div><div class="qv" style="color:#4060A0;">1</div><div class="qd">悲傷時你傾向獨自面對，需學習接受他人支持</div></div><div class="qq-item" style="background:#EEE8F5;border-color:#9070C0;"><div class="qn">懼</div><div class="qv" style="color:#6040A0;">3</div><div class="qd">深層恐懼是被忽視，害怕失去表達的舞台</div></div><div class="qq-item" style="background:#E8F5E8;border-color:#60A070;"><div class="qn">愛</div><div class="qv" style="color:#307050;">3</div><div class="qd">愛的方式是言語讚美，以表達與創意傳遞深情</div></div><div class="qq-item" style="background:#F5F0E0;border-color:#C0A040;"><div class="qn">欲</div><div class="qv" style="color:#907020;">4</div><div class="qd">渴望穩定與安全，內心渴望建立堅實的基礎</div></div><div class="qq-item" style="background:#F0E8F0;border-color:#A060A0;"><div class="qn">惡</div><div class="qv" style="color:#703070;">7</div><div class="qd">厭惡膚淺與虛偽，對不真誠的關係零容忍</div></div></div>
+    </section>
+
+    <section class="section blue">
+      <div class="section-title">流　年　能　量</div>
+      <div class="section-desc">
+        流年呈現不同年度的生命主題。它不是對未來的絕對預告，而是一份方向提醒，幫助你在當年度把注意力與行動放在更適合的位置。
+      </div>
+
+      <div class="liunian-grid"><div class="ln-item"><div class="ly">2025年</div><div class="lv">3</div><div class="lk">表達・社交・創意</div><div class="ld">表達力與社交能量旺盛，適合拓展人脈、創作與分享，是展現自我的黃金時期。</div></div><div class="ln-item current"><div class="ly">2026年・當前</div><div class="lv">4</div><div class="lk">穩固・建設・努力</div><span class="ln-tag ln-tag-current">當前流年</span><div class="ld">踏實建設之年，適合打好基礎、處理實務，雖然進展緩慢，但每一步都是未來的基石。</div></div><div class="ln-item"><div class="ly">2027年</div><div class="lv">5</div><div class="lk">變化・自由・轉機</div><div class="ld">變化與轉機之年，意外的機遇可能出現，保持彈性與開放心態，擁抱改變。</div></div></div>
+
+      <div class="intro" style="margin-bottom:0;">
+        每年生日前後，是新舊年度能量逐漸交接的時期。你不需要急著一次完成所有改變，只要開始留意新的感受、機會與選擇。
+      </div>
+    </section>
+
+    <section class="section violet">
+      <div class="section-title">九　宮　能　量　地　圖</div>
+      <div class="section-desc">
+        九宮能量地圖呈現你較自然的生命能力，以及值得後天培養的方向。能量強並不代表永遠有利；待發展也不是不足，而是生命留給你的成長空間。
+      </div>
+
+      <div class="bagua-layout">
+        <div class="bagua-grid"><div class="bagua-cell"><div class="bc-num">1</div><div class="bc-circles">●●●●</div></div><div class="bagua-cell missing"><div class="bc-num">4</div><div class="bc-miss">待發展</div></div><div class="bagua-cell"><div class="bc-num">7</div><div class="bc-circles">●●</div></div><div class="bagua-cell"><div class="bc-num">2</div><div class="bc-circles">●</div></div><div class="bagua-cell"><div class="bc-num">5</div><div class="bc-circles">●●</div></div><div class="bagua-cell"><div class="bc-num">8</div><div class="bc-circles">●</div></div><div class="bagua-cell missing"><div class="bc-num">3</div><div class="bc-miss">待發展</div></div><div class="bagua-cell missing"><div class="bc-num">6</div><div class="bc-miss">待發展</div></div><div class="bagua-cell"><div class="bc-num">9</div><div class="bc-circles">●</div></div></div>
+
+        <div>
+          <div class="energy-legend">
+            <div class="energy-level level-strong">
+              <strong>明顯能量</strong><br>
+              較容易自然發揮，也需要留意使用過度。
+            </div>
+
+            <div class="energy-level level-develop">
+              <strong>待發展能量</strong><br>
+              適合透過生活經驗與練習逐步建立。
+            </div>
+          </div>
+
+          <div class="bagua-feature-grid"><div class="bagua-feature-item" style="background:#EAF0FF;border-left:3px solid #6080C0;"><span class="bfi-num">1</span><span class="bfi-tag">領導・開創・獨立</span><div class="bfi-desc">天生具備強烈的領導氣場，勇於開拓新局，獨立自主、不依賴他人，行動力強，適合走在前端。</div></div><div class="bagua-feature-item" style="background:#FFF0F5;border-left:3px solid #C06080;"><span class="bfi-num">5</span><span class="bfi-tag">自由・變化・冒險</span><div class="bfi-desc">渴望自由與變化，適應力強，善於在變動中找到機會，充滿冒險精神。</div></div><div class="bagua-feature-item" style="background:#F0EAF5;border-left:3px solid #9060B0;"><span class="bfi-num">7</span><span class="bfi-tag">深思・靈性・分析</span><div class="bfi-desc">擁有深度思考與靈性探索的天賦，喜歡獨處沉澱，對事物有獨到見解，追求真理與本質。</div></div></div>
+
+          <div class="missing-explain"><strong>值得後天培養的方向：3・4・6</strong><br><b>3 號能量</b>｜表達力與創意需後天培養，容易壓抑自我，需刻意練習說出感受與想法。<br><b>4 號能量</b>｜穩定性與執行力需後天加強，容易虎頭蛇尾，需刻意培養耐心與計畫能力。<br><b>6 號能量</b>｜責任感與家庭意識需後天加強，在愛與付出的平衡上是一生課題。<br></div>        </div>
+      </div>
+    </section>
+
+    <div class="lighthouse">
+      你的元本圖不是為了決定你只能成為誰，而是讓你知道：哪些力量早已存在，哪些方向值得繼續培養。看懂自己之後，你便能在每一次選擇中，慢慢走出不同的道路。
+    </div>
+
+    <footer class="footer">
+      <strong>大沈堂・元本圖</strong>　剛好是你<br>
+      彭秋龍・1975/11/10　生命能量地圖
+    </footer>
+  </div>
+
+  
+      <div class="page page-break">
+      <header class="header">
+        <div class="brand">大　沈　堂</div>
+        <div class="title">元　本　圖</div>
+        <div class="subtitle">彭秋龍　專屬生命解析</div>
+        <div class="slogan">從看見自己，到走出自己的路</div>
+      </header>
+
+      <main class="report-content">
+        <section class="report-card report-card-gold"><h2 class="report-card-title">先接住現在的你</h2><p>最近的你,可能常常覺得心裡有兩種聲音在拉扯——一邊想著要把事情做到最好、把答案想得更透徹,另一邊卻又有一種說不清楚的躍動感,想要換個環境、換個做法,不想一直停留在原地。這種「想深入又想突破」的感覺,可能讓你有點內耗,甚至偶爾覺得自己是不是太多想法了。</p><p>也可能在某些關係或責任裡,你扛了很多,卻沒有太多機會說出心裡真正的感受,那種「我很在意,但說不出口」的悶,悄悄積在心裡,連自己都沒意識到已經累積了多久。</p><p>這些感受不是你的問題,而是你內在幾種力量正在互相拉扯——這份報告會陪你把這些拉扯看清楚,不是要你變成別人,而是幫你找到跟自己相處更舒服的方式。</p><p>---</p></section><section class="report-card report-card-rose"><h2 class="report-card-title">你的核心底色</h2><p>你的<strong>主性格7、生命數7、天賦數7</strong>,三個7疊在一起,說明你天生就有一種「不喜歡表面答案」的特質。你習慣把事情想深、想透,喜歡獨立思考,不容易被一句話說服,這是你很扎實的一部分,也是別人願意信任你判斷的原因。</p><p>但<strong>內心密碼5</strong>告訴我們,你內在其實渴望自由、變化、新鮮感,不喜歡被框住,常常有種「想突破現況」的衝動。這跟外顯的沉穩7放在一起,會形成一種內在張力:你看起來冷靜、有分析力、值得依靠;但心裡有一部分在渴望動起來、換個場景、試試不一樣的可能。</p><p><strong>外心密碼6</strong>則讓別人看到的你,是一個負責、顧家、有肩膀、願意照顧他人的人。這跟你內心渴望自由的那一面,有時候會產生落差——別人覺得你穩,你自己卻覺得有點被責任綁住。這不是矛盾,而是你需要學會的整合:<strong>在承擔責任的同時,也給自己留一點呼吸與探索的空間</strong>。</p><p><strong>星座數8</strong>再加上一份對成果、對掌控感的在意,讓你不只想活得深刻,也想活得有實質的東西可以掌握——你不會滿足於空談,你要看到真正的成果。</p><p>---</p></section><section class="report-card report-card-sage"><h2 class="report-card-title">你真正的優勢</h2><p><strong>一、深度思考與問題拆解能力</strong><br>你不容易被表面訊息帶著走,遇到複雜狀況時,你能一層層拆解、找出真正的關鍵。這適合用在:談判前的準備、財務規劃的評估,或是團隊卡關時需要有人冷靜分析局勢的場合。</p><p><strong>二、值得信賴的穩定感</strong><br>外心6讓你自然散發一種「這個人靠得住」的氣場,身邊的人願意把重要的事交給你。這在家庭決策、朋友求助,或是職場上被託付重要專案時,會是你很大的資產。</p><p><strong>三、對自由與新鮮感的敏銳度</strong><br>內心5讓你對「一成不變」特別敏感,這代表你其實很適合需要創新、需要突破舊框架的工作或計畫。當你允許自己有一點變化的空間,反而能激發出更多動力,而不是被消耗殆盡。</p><p>---</p></section><section class="report-card report-card-blue"><h2 class="report-card-title">容易讓你辛苦的慣性</h2><p>當壓力來的時候,7的特質可能會讓你退回到自己的世界裡,變得比較沉默、不太想解釋太多,寧可自己消化。這在旁人眼中,有時會被誤解成「冷淡」或「難靠近」,其實你只是需要時間整理思緒,不代表你不在乎。</p><p>同時,內心5渴望自由、外心6又習慣承擔責任,這兩者拉扯到一定程度時,你可能會出現一種「明明很累卻不敢說要休息」的狀態,或是「想改變卻怕影響別人」的猶豫。這是一種保護機制——你怕給別人添麻煩,也怕被說不負責任,所以選擇先把感受壓下去。</p><p>具體可調整的方向:</p><ul><li>練習在感覺快要「關起來」之前,先跟身邊親近的人說一句:「我現在需要一點自己的時間」,而不是直接沉默消失。</li><li>給自己設定一個「小範圍的自由」,例如每週固定一段時間做完全屬於自己的事,不需要交代理由。</li><li>當責任感讓你喘不過氣時,練習把「我必須全部扛」換成「我可以先扛這一部分,其他部分我可以找人分擔」。</li></ul><p>---</p></section><section class="report-card report-card-gold"><h2 class="report-card-title">情緒與關係</h2><p>你的七情組合中,<strong>惡（O）高達7</strong>,搭配<strong>懼（L）3、欲（N）4</strong>,說明你對「界線被侵犯」或「不被尊重」這件事特別敏感,一旦感覺到不對,內心的排斥感會來得又快又強。這不是脾氣差,而是你對「自我完整性」的保護本能在運作。</p><p>而<strong>喜（I）1、哀（K）1</strong>都偏低,代表你不太容易把情緒明顯表現出來,習慣把感受往內收,這也解釋了為什麼別人常常猜不透你在想什麼——不是你沒感覺,而是你選擇不說,或者不知道怎麼開口說。</p><p><strong>愛（M）3</strong>則顯示你在情感上是願意付出的,但因為表達習慣比較內斂,常常變成「做很多、說很少」,久了容易讓對方感覺不到,或是讓自己覺得付出沒被看見,累積出一種不容易解釋的委屈。</p><p>具體建議:</p><ul><li>練習用一句簡單的話表達需要,例如:「我希望你能多陪我聊聊」,而不是等對方自己發現。</li><li>當感覺被冒犯或不被尊重時,及早用平靜但明確的語氣說出界線,而不是等累積到爆發才反應。</li><li>在關係裡,允許自己說「我今天沒有力氣」,這不會讓你變得不負責任,反而會讓關係更真實、更能被理解。</li></ul><p>---</p></section><section class="report-card report-card-rose"><h2 class="report-card-title">工作與事業方向</h2><p>你適合的工作環境,是<strong>能給你思考空間、又不會被過度監控的地方</strong>。比起完全制式化、每天重複同樣流程的工作,你在需要分析、規劃、解決問題的角色裡,會發揮得更好,也更容易感覺到成就感。</p><p>決策上,你傾向先想清楚再行動,不喜歡被逼著倉促表態,所以如果你是主管或創業者,給自己保留「先評估、再決定」的緩衝時間,會讓你做出更好的判斷,也減少事後的懊悔。</p><p>合作模式上,你適合跟能尊重你獨立思考、不會頻繁打斷你節奏的夥伴一起工作;如果團隊氛圍太吵、太多即興變動,反而容易耗損你的能量,讓你想抽身。</p><p>具體方向:</p><ul><li>在選擇工作或專案時,優先考慮「是否有一定的自主決策空間」,而不只是薪資高低。</li><li>若在團隊中,主動爭取「需要深度分析」的任務區塊,而不是被動接受瑣碎重複的工作。</li><li>每季給自己安排一次「工作型態檢視」,問自己:現在的節奏,是讓我發揮還是讓我耗竭。</li></ul><p>---</p></section><section class="report-card report-card-sage"><h2 class="report-card-title">家庭與財富</h2><p><strong>T值3</strong>加上<strong>41～60歲事業發展R值3</strong>,顯示你的家庭與財富課題,跟「持續累積」和「耐心經營」有關,不是靠一次性衝刺,而是靠長期、穩定的投入慢慢堆疊出來,急不來,也不需要急。</p><p><strong>21～40歲工作與人際S值9</strong>則說明這個階段你在人際與工作上經歷的歷練較多,這些歷練其實正是你後續累積財富與穩定家庭的養分,不是白白辛苦一場,而是在為後面的階段打底。</p><p>具體可執行建議:</p><ul><li>建立一個「固定比例儲蓄」的習慣,即使金額不大,重點是養成長期累積的節奏感,而不是等有多餘的錢才存。</li><li>家庭溝通上,主動安排固定的「家庭對話時間」,把心裡沒說出口的擔心或期待,用輕鬆的方式說出來,避免累積成隔閡。</li><li>財務規劃上,優先選擇你能理解、能掌握邏輯的投資方式,而不是追求短期高回報但你自己也看不懂的選項——這跟你7的特質更契合,也更讓你安心。</li></ul><p>---</p></section><section class="report-card report-card-blue"><h2 class="report-card-title">今年的提醒</h2><p>2026年的流年數是<strong>4</strong>,這是一個適合「打地基、把架構穩下來」的年份,不是衝刺爆發的年份,而是整理、鞏固、把之前累積的東西系統化的時機。</p><p>適合推進的,是那些需要規劃、需要建立制度或習慣的事,例如財務規劃、工作流程優化、健康作息調整。適合等待的,是那些還沒想清楚就想快速下決定的重大轉變,例如衝動的職涯大轉彎或大額投資。</p><p>今年最需要避免的,是因為內心5的躍動感,一時衝動做出還沒經過充分評估的改變,事後才發現地基沒打穩,反而要花更多時間補救。</p><p>---</p></section><section class="report-card report-card-gold"><h2 class="report-card-title">接下來可以這樣做</h2><h3 class="report-subtitle">未來七天</h3><ul><li>找一天,寫下最近讓你感覺「累但說不出口」的三件事,不用解決,先誠實面對。</li><li>練習跟一位親近的人說一句你平常不會說的真心話。</li><li>給自己安排一小段完全不被打擾的獨處時間,哪怕只有30分鐘。</li></ul><h3 class="report-subtitle">未來三十天</h3><ul><li>建立一個固定的儲蓄或記帳習慣,觀察一個月後金錢流向的變化。</li><li>在工作或生活中,主動爭取一個能發揮你分析能力的小任務,觀察自己的投入感。</li><li>每週安排一次家庭或伴侶對話時間,持續四週,觀察關係的細微轉變。</li></ul><h3 class="report-subtitle">未來九十天</h3><ul><li>檢視這三個月的財務累積狀況,調整儲蓄或投資比例,建立更適合自己的長期節奏。</li><li>評估目前的工作或角色,是否給了你足夠的自主空間,若沒有,開始規劃調整方向。</li><li>觀察自己在關係中表達需要與界線的次數是否增加,並持續強化這個習慣。</li></ul><p>---</p></section><section class="report-card report-card-rose"><h2 class="report-card-title">給你的最後一段話</h2><p>彭秋龍,你身上其實一直有兩種力量在拉扯——一邊是沉靜、深思、值得依靠的你,一邊是渴望自由、想突破框架的你。這兩者不是誰要打敗誰,而是需要你慢慢學會,在承擔責任的同時,也給自己一點鬆綁的空間。</p><p>你不需要變成一個更外放、更會表達的人才算「調整好」,你只需要在關鍵時刻,願意多說一句真心話,願意在感覺累的時候,允許自己喘一口氣。</p><p>2026年不是需要你證明什麼的一年,而是讓你把過去累積的東西,好好安放下來的一年。慢慢走,你一直都走得比自己以為的更穩。</p></section>      </main>
+
+      <footer class="footer">
+        <strong>大沈堂・元本圖</strong>　剛好是你<br>
+        彭秋龍・1975/11/10　專屬生命解析
+      </footer>
+    </div>
+  
+  
+  <div class="page">
+    <header class="header">
+      <div class="brand">大　沈　堂</div>
+      <div class="title">隨　身　燈　塔</div>
+      <div class="subtitle">彭秋龍　專屬能量載體與每日行動</div>
+      <div class="slogan">讓每一次看見，都成為回到自己的提醒</div>
+    </header>
+
+    <div class="carrier-hero">
+      <div class="carrier-kicker">大沈堂為你選定的能量載體</div>
+      <div class="carrier-name">專屬能量載體｜由大沈堂為你選定</div>
+      <div class="carrier-sub">它不替你決定命運，而是陪你記得自己想走的方向</div>
+    </div>
+
+    <div class="carrier-guide">
+      大沈堂將依據你的元本圖、生命能量與現階段最需要被提醒的方向，為你選定專屬能量載體。它不是替你決定命運，而是在日常生活中，陪伴你記得自己的信念與方向。當你感到疲憊、猶豫，或再次回到熟悉的慣性時，請透過看見、觸碰或輕握載體，把注意力帶回自己，念出專屬的晨光三句，並完成今天能做到的一個小行動。每一次重新選擇，都是你正在為自己創造新的可能。    </div>
+
+    <div class="morning-box">
+      <div class="morning-title">晨　光　三　句</div>
+      <div class="morning-sub">信念・選擇・行動</div>
+
+      <div class="morning-lines">
+        <div class="morning-line">
+          <div class="morning-number">一</div>
+          <div class="morning-text">我允許自己在扛起責任的同時，也留一點空間好好呼吸。</div>
+        </div>
+
+        <div class="morning-line">
+          <div class="morning-number">二</div>
+          <div class="morning-text">今天我選擇把心裡真正的想法，說出來讓人聽見。</div>
+        </div>
+
+        <div class="morning-line">
+          <div class="morning-number">三</div>
+          <div class="morning-text">現在我要花十分鐘，把一件說不出口的心事寫下來。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ritual">
+      <div class="ritual-title">每日陪伴方式</div>
+      <ol>
+        <li>每天早上，輕握、佩戴或凝視你的能量載體。</li>
+        <li>慢慢呼吸三次，讓注意力從外界回到自己。</li>
+        <li>將晨光三句依序念出，每一句可以緩慢讀三次。</li>
+        <li>讀到第三句時，確認今天願意完成的具體行動。</li>
+        <li>晚上再次看見載體時，回顧自己今天做出的選擇。</li>
+        <li>即使今天沒有完全做到，也不必責備自己；明天仍能重新開始。</li>
+      </ol>
+    </div>
+
+    <div class="lighthouse">
+      <strong>知命</strong>，是看懂自己的生命結構；<br>
+      <strong>改命</strong>，是在慣性出現時重新選擇；<br>
+      <strong>造命</strong>，是讓信念與行動持續走向同一個方向。<br><br>
+      願這件載體在生活紛亂時，陪你重新看見心裡的那盞燈。
+    </div>
+
+    <footer class="footer">
+      <strong>大沈堂・元本圖</strong>　剛好是你<br>
+      彭秋龍・1975/11/10　專屬隨身燈塔
+    </footer>
+  </div>
+</body>
+</html>
