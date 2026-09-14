@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大沈堂・元本圖｜彭秋龍</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;900&family=Noto+Sans+TC:wght@300;400;700&display=swap');
+:root{--bg:#F2EDE8;--paper:#FAF7F4;--ink:#3D3530;--ink-light:#7A6E68;--accent:#8C7B6B;--gold:#B5956A;--gold-lt:#E8D9C0;--sage:#7A8C78;--sage-lt:#D6E0D4;--dust:#8C8098;--dust-lt:#DDD8E8;--rose:#A07878;--rose-lt:#EAD8D8;--mist:#6B8090;--mist-lt:#D4DDE4;--line:#D4CCC4;--master:#8C3030;--constrain:#4A7A5A;--constrain-lt:#D4EAD8;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans TC',sans-serif;background:var(--bg);display:flex;flex-direction:column;align-items:center;padding:24px 16px;font-size:12pt;}
+
+ 
+@page{ size:A4 portrait; margin:8mm; }
+
+.a4{width:210mm;min-height:297mm;background:var(--paper);padding:10mm 12mm;box-shadow:0 4px 32px rgba(61,53,48,.13);border-radius:2px;position:relative;margin-bottom:24px;}
+.a4.page-break{page-break-after:always;break-after:page;}
+
+.header{display:flex;flex-direction:column;align-items:center;padding-bottom:8px;border-bottom:1.5px solid var(--gold);margin-bottom:10px;}
+.header-brand{font-family:'Noto Serif TC',serif;font-size:11px;letter-spacing:4px;color:var(--accent);margin-bottom:4px;}
+.header-title{font-family:'Noto Serif TC',serif;font-size:22px;font-weight:900;letter-spacing:6px;color:var(--ink);}
+.header-sub{font-size:12pt;color:var(--ink-light);margin-top:4px;letter-spacing:2px;}
+.header-slogan{font-size:10px;color:var(--gold);letter-spacing:3px;margin-top:3px;}
+
+.node{display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:50%;border:1.5px solid;text-align:center;position:relative;}
+.node .nl{font-size:8.5px;font-weight:700;line-height:1.1;letter-spacing:.5px;}
+.node .nf{font-size:7px;line-height:1;opacity:.75;}
+.node .nv{font-size:19px;font-weight:900;line-height:1.1;font-family:'Noto Serif TC',serif;}
+.n-gold{background:#F5EDD8;border-color:var(--gold);color:#5a4020;width:60px;height:60px;}
+.n-main{background:#EDE4D4;border-color:var(--gold);border-width:2.5px;color:var(--ink);width:76px;height:76px;}
+.n-main .nv{font-size:28px;color:var(--gold);}
+.n-sage{background:var(--sage-lt);border-color:var(--sage);color:#2a3c28;width:56px;height:56px;}
+.n-mist{background:var(--mist-lt);border-color:var(--mist);color:#1e3040;width:56px;height:56px;}
+.n-dust{background:var(--dust-lt);border-color:var(--dust);color:#2e2840;width:56px;height:56px;}
+.n-dust.constrain-node{border:2.5px solid var(--constrain);box-shadow:0 0 0 2px var(--constrain-lt);}
+.n-rose{background:var(--rose-lt);border-color:var(--rose);color:#4a1818;width:52px;height:52px;}
+.age-tag{font-size:11px;font-weight:700;padding:3px 8px;border-radius:3px;white-space:nowrap;letter-spacing:.5px;line-height:1.5;text-align:center;}
+.age-sage{color:var(--sage);border:1px solid var(--sage);background:var(--sage-lt);}
+.age-gold{color:#7a5a20;border:1px solid var(--gold);background:var(--gold-lt);}
+.age-mist{color:var(--mist);border:1px solid var(--mist);background:var(--mist-lt);}
+.core-area{width:100%;background:linear-gradient(180deg,#EDE0D8 0%,#E4D4CC 100%);border:1.5px solid var(--rose);border-radius:6px;padding:10px 8px 8px;margin-top:6px;}
+.base-bar{background:var(--ink);border-radius:5px;padding:7px 4px;margin-top:8px;display:flex;justify-content:center;gap:3px;align-items:center;}
+.base-node{background:var(--paper);border:1.5px solid var(--gold);border-radius:50%;width:36px;height:36px;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.base-node .bl{font-size:7.5px;color:var(--accent);font-weight:700;}
+.base-node .bv{font-size:15px;font-weight:900;color:var(--ink);line-height:1;font-family:'Noto Serif TC',serif;}
+.base-sep{width:1.5px;height:26px;background:var(--gold);opacity:.6;margin:0 3px;border-radius:2px;}
+.base-labels{display:flex;justify-content:center;margin-top:5px;color:var(--rose);font-size:10px;font-weight:700;letter-spacing:.5px;}
+.base-label-group{text-align:center;flex:1;line-height:1.5;}
+
+ 
+.section{margin-top:10px;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;padding:10px 12px;background:white;break-inside:avoid;page-break-inside:avoid;}
+.section.sec-rose{border-left-color:var(--rose);}
+.section.sec-sage{border-left-color:var(--sage);}
+.section.sec-mist{border-left-color:var(--mist);}
+.section.sec-dust{border-left-color:var(--dust);}
+.section-title{font-family:'Noto Serif TC',serif;font-size:13px;font-weight:900;color:var(--ink);text-align:center;margin-bottom:6px;padding-bottom:6px;border-bottom:1px solid var(--line);letter-spacing:2px;}
+.section-desc{font-size:12pt;color:var(--ink-light);text-align:center;margin-bottom:8px;line-height:1.9;letter-spacing:.3px;}
+
+.core-constrain-row{display:grid;grid-template-columns:1fr 3fr;gap:8px;margin-top:8px;}
+.constrain-box{border:2px solid var(--constrain);border-radius:6px;padding:8px 6px;background:var(--constrain-lt);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;break-inside:avoid;page-break-inside:avoid;}
+.constrain-box .ctitle{font-family:'Noto Serif TC',serif;font-size:11px;font-weight:900;color:var(--constrain);letter-spacing:1px;margin-bottom:4px;}
+.constrain-box .cval{font-size:32px;font-weight:900;color:var(--constrain);font-family:'Noto Serif TC',serif;line-height:1;}
+.constrain-box .cformula{font-size:10.5px;color:#3a5a40;margin-top:3px;}
+.constrain-box .ctag{font-size:10px;background:var(--constrain);color:white;border-radius:3px;padding:2px 6px;margin-top:4px;}
+.constrain-box .cexplain{font-size:12pt;color:#2a4a30;margin-top:6px;line-height:1.9;border-top:1px dashed #7aaa88;padding-top:6px;text-align:left;}
+
+.three-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;text-align:center;}
+.code-box{border:1px solid var(--line);border-radius:5px;padding:6px 4px;background:var(--paper);break-inside:avoid;page-break-inside:avoid;}
+.code-box .cv{font-size:22px;font-weight:900;color:var(--dust);font-family:'Noto Serif TC',serif;line-height:1.1;}
+.code-box .cl{font-size:11px;font-weight:700;color:var(--ink);margin-bottom:2px;}
+.code-box .cf{font-size:9.5px;color:var(--ink-light);margin-top:2px;}
+.code-box .cd{font-size:9.5px;color:var(--accent);margin-top:2px;}
+.code-box .ce{font-size:12pt;color:var(--ink-light);margin-top:6px;line-height:1.9;border-top:1px dashed var(--line);padding-top:6px;text-align:left;}
+
+.combo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;}
+.combo-item{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:5px 3px;text-align:center;break-inside:avoid;page-break-inside:avoid;}
+.combo-item .cn{font-size:10px;font-weight:700;color:var(--accent);}
+.combo-item .cv{font-size:12px;font-weight:900;color:var(--ink);font-family:'Noto Serif TC',serif;}
+.combo-item .cd{font-size:9px;color:var(--ink-light);margin-top:1px;}
+.combo-item .ce{font-size:11.5pt;color:var(--accent);margin-top:4px;line-height:1.8;border-top:1px dashed var(--line);padding-top:4px;}
+.combo-item.hi-dust{background:var(--dust-lt);border-color:var(--dust);}
+.combo-item.hi-gold{background:var(--gold-lt);border-color:var(--gold);}
+
+.legend-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;}
+.legend-item{padding:8px 9px;border-radius:5px;font-size:11px;line-height:1.9;break-inside:avoid;page-break-inside:avoid;}
+.legend-item .lt{font-weight:900;font-size:12px;margin-bottom:2px;display:block;}
+.legend-item .le{font-size:11px;color:var(--ink-light);margin-top:4px;line-height:1.8;border-top:1px dashed rgba(0,0,0,.1);padding-top:4px;display:block;}
+.li-sage{background:var(--sage-lt);border:1px solid var(--sage);color:#2a3c28;}
+.li-gold{background:var(--gold-lt);border:1px solid var(--gold);color:#5a4020;}
+.li-mist{background:var(--mist-lt);border:1px solid var(--mist);color:#1e3040;}
+.footer{text-align:center;font-size:10.5px;color:var(--ink-light);margin-top:8px;padding-top:6px;border-top:1px solid var(--line);letter-spacing:.5px;line-height:1.9;}
+.footer strong{color:var(--gold);}
+
+.qiqing-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;}
+.qq-item{border-radius:5px;padding:8px 4px;text-align:center;border:1px solid var(--line);background:var(--paper);break-inside:avoid;page-break-inside:avoid;}
+.qq-item .qn{font-size:10px;font-weight:700;color:var(--accent);}
+.qq-item .qe{font-size:11px;color:var(--ink-light);}
+.qq-item .qv{font-size:18px;font-weight:900;font-family:'Noto Serif TC',serif;color:var(--dust);line-height:1.2;}
+.qq-item .qp{font-size:9px;color:var(--ink-light);}
+.qq-item .qd{font-size:10.5pt;color:var(--accent);margin-top:5px;line-height:1.7;border-top:1px dashed var(--line);padding-top:5px;}
+
+.liunian-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:8px;}
+.ln-item{border-radius:5px;padding:9px 7px;text-align:center;border:1px solid var(--line);background:var(--paper);break-inside:avoid;page-break-inside:avoid;}
+.ln-item.current{background:#EDE4D4;border:2px solid var(--gold);}
+.ln-item .ly{font-size:11px;font-weight:700;color:var(--ink-light);}
+.ln-item .lv{font-size:28px;font-weight:900;font-family:'Noto Serif TC',serif;color:var(--dust);line-height:1.1;}
+.ln-item.current .lv{color:var(--gold);}
+.ln-item .lf{font-size:9.5px;color:var(--ink-light);margin-top:2px;}
+.ln-item .lk{font-size:10.5px;font-weight:700;color:var(--accent);margin-top:3px;}
+.ln-item.current .lk{color:#7a5a20;}
+.ln-item .ld{font-size:11.5pt;color:var(--ink-light);margin-top:6px;line-height:1.8;border-top:1px dashed var(--line);padding-top:6px;text-align:left;}
+.ln-tag{font-size:10px;padding:1px 6px;border-radius:3px;display:inline-block;margin-top:3px;}
+.ln-tag-current{background:var(--gold);color:white;}
+
+.phase-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:6px;}
+.phase-item{border-radius:5px;padding:8px 5px;text-align:center;border:1px solid var(--line);break-inside:avoid;page-break-inside:avoid;}
+.phase-item .pi{font-size:14px;}
+.phase-item .pt{font-size:10.5px;font-weight:700;color:var(--ink);margin-top:2px;}
+.phase-item .pp{font-size:9.5px;color:var(--ink-light);margin-top:2px;line-height:1.6;}
+.ph1{background:#EAF0EA;border-color:var(--sage);}
+.ph2{background:#E8EEF4;border-color:var(--mist);}
+.ph3{background:#F5EDD8;border-color:var(--gold);}
+.ph4{background:#EAD8D8;border-color:var(--rose);}
+
+.bagua-section{margin-top:10px;border:1px solid var(--line);border-left:4px solid var(--dust);border-radius:8px;padding:12px;background:white;}
+.bagua-layout{display:flex;gap:16px;align-items:flex-start;margin-top:8px;}
+.bagua-grid-wrap{position:relative;flex-shrink:0;}
+.bagua-grid{display:grid;grid-template-columns:repeat(3,72px);grid-template-rows:repeat(3,72px);gap:4px;}
+.bagua-cell{border:1.5px solid var(--line);border-radius:6px;background:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;break-inside:avoid;page-break-inside:avoid;}
+.bagua-cell.missing{background:#FFF0E8;border:2px solid #D4845A;}
+.bagua-cell .bc-num{font-family:'Noto Serif TC',serif;font-size:22px;font-weight:900;color:var(--ink);line-height:1;}
+.bagua-cell.missing .bc-num{color:#C06030;}
+.bagua-cell .bc-circles{font-size:10px;color:var(--gold);letter-spacing:1px;margin-top:2px;line-height:1;}
+.bagua-cell .bc-miss{font-size:9.5px;color:#C06030;font-weight:700;margin-top:2px;}
+.bagua-info{flex:1;display:flex;flex-direction:column;gap:8px;}
+.bagua-source-table{width:100%;border-collapse:collapse;font-size:10.5px;}
+.bagua-source-table th{background:var(--ink);color:white;padding:5px 6px;font-weight:700;letter-spacing:.5px;}
+.bagua-source-table td{padding:4px 6px;border-bottom:1px solid var(--line);color:var(--ink);vertical-align:middle;break-inside:avoid;}
+.bagua-source-table tr:nth-child(even) td{background:#F8F5F2;}
+.bagua-source-table .missing-row td{background:#FFF0E8;color:#C06030;font-weight:700;}
+.bagua-feature-title{font-family:'Noto Serif TC',serif;font-size:11px;font-weight:900;color:var(--ink);letter-spacing:1px;border-bottom:1px solid var(--line);padding-bottom:4px;margin-bottom:6px;}
+.bagua-feature-grid{display:flex;flex-direction:column;gap:5px;}
+.bagua-feature-item{border-radius:5px;padding:6px 9px;font-size:10.5px;line-height:1.8;break-inside:avoid;}
+.bagua-feature-item .bfi-num{font-weight:900;font-size:13px;font-family:'Noto Serif TC',serif;margin-right:4px;}
+.bagua-feature-item .bfi-circles{font-size:9px;margin-right:6px;color:var(--gold);}
+.bagua-feature-item .bfi-tag{font-size:9.5px;font-weight:700;color:var(--accent);}
+.bagua-feature-item .bfi-desc{font-size:10.5px;color:var(--ink-light);margin-top:2px;}
+.line-legend{display:flex;gap:12px;margin-top:6px;font-size:10px;color:var(--ink-light);align-items:center;flex-wrap:wrap;}
+.line-legend-item{display:flex;align-items:center;gap:4px;}
+.line-dot{width:24px;height:3px;border-radius:2px;}
+.missing-explain{background:#FFF8F5;border:1px solid #D4845A;border-radius:5px;padding:8px 9px;font-size:10.5px;color:#7A4020;line-height:1.8;margin-top:4px;break-inside:avoid;}
+.missing-explain strong{color:#C06030;}
+
+.calc-basis{margin-top:10px;border:1px solid var(--line);border-radius:6px;padding:8px 10px;background:#FDFAF7;}
+.calc-basis-title{font-family:'Noto Serif TC',serif;font-size:11px;font-weight:900;color:var(--ink);letter-spacing:2px;border-bottom:1px solid var(--line);padding-bottom:4px;margin-bottom:8px;text-align:center;}
+.calc-basis-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+.calc-card{border-radius:5px;padding:8px 10px;font-size:10.5px;line-height:1.8;break-inside:avoid;page-break-inside:avoid;}
+.cc-xiantian{background:#EEF2FF;border:1px solid #8090C0;}
+.cc-shengming{background:#EEF8EE;border:1px solid #70A878;}
+.cc-tianfu{background:#F5F0FF;border:1px solid #9878C0;}
+.cc-xingzuo{background:#FFF5EE;border:1px solid #C09060;}
+.calc-card .cc-title{font-weight:900;font-size:11px;color:var(--ink);}
+.calc-card .cc-formula{font-size:9.5px;color:var(--ink-light);margin-top:2px;}
+.calc-card .cc-result{font-size:13px;font-weight:900;font-family:'Noto Serif TC',serif;color:var(--dust);margin:2px 0;}
+.calc-card .cc-desc{font-size:11pt;color:var(--ink-light);margin-top:5px;line-height:1.8;border-top:1px dashed rgba(0,0,0,.1);padding-top:5px;}
+
+ 
+.ai-section{margin-top:10px;border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:8px;padding:14px 16px;background:white;position:relative;overflow:hidden;box-shadow:0 2px 8px rgba(61,53,48,.08);}
+.ai-section::before{content:'';position:absolute;top:-25px;right:-25px;width:70px;height:70px;background:var(--gold);opacity:.1;transform:rotate(45deg);}
+.ai-content{font-size:12pt;color:var(--ink);line-height:2;white-space:normal;}
+.ai-content h1{font-family:'Noto Serif TC',serif;font-size:16pt;font-weight:900;color:var(--gold);border-bottom:2px solid var(--gold);padding-bottom:6px;margin:16px 0 10px;break-after:avoid;}
+.ai-content h2{font-family:'Noto Serif TC',serif;font-size:13pt;font-weight:900;color:var(--sage);border-left:4px solid var(--sage);padding-left:8px;margin:14px 0 8px;break-after:avoid;}
+.ai-content p{font-size:12pt;line-height:2;margin:6px 0;}
+.ai-content strong{color:var(--rose);}
+.ai-content table{width:100%;border-collapse:collapse;margin:10px 0;font-size:11.5pt;break-inside:avoid;}
+.ai-content th{background:var(--gold);color:white;padding:6px 8px;}
+.ai-content td{border:1px solid var(--line);padding:6px 8px;}
+
+@media print{
+  body{background:white;padding:0;}
+  .a4{box-shadow:none;padding:6mm 8mm;}
+}
+ 
+
+.custom-report-section {
+  margin-top: 18px;
+}
+
+.custom-report-content {
+  font-size: 12pt;
+  line-height: 1.9;
+  color: #3D3530;
+}
+
+.report-card {
+  box-sizing: border-box;
+  margin: 0 0 16px;
+  padding: 16px 18px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  border-left: 5px solid #B5956A;
+  box-shadow: 0 2px 8px rgba(61, 53, 48, 0.08);
+
+  break-inside: avoid;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+
+.report-card-gold {
+  background: #FFF9EF;
+  border-left-color: #B5956A;
+}
+
+.report-card-rose {
+  background: #FFF4F3;
+  border-left-color: #B87575;
+}
+
+.report-card-sage {
+  background: #F2F8F2;
+  border-left-color: #6F9475;
+}
+
+.report-card-blue {
+  background: #F2F5FA;
+  border-left-color: #6F86A8;
+}
+
+.report-card-title {
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  color: #5A4020;
+  font-family: "Noto Serif TC", serif;
+  font-size: 17pt;
+  line-height: 1.4;
+  border-bottom: 1px solid rgba(181, 149, 106, 0.35);
+}
+
+.report-subtitle {
+  margin: 16px 0 8px;
+  color: #705847;
+  font-size: 13.5pt;
+  line-height: 1.5;
+}
+
+.report-card p {
+  margin: 0 0 11px;
+  text-align: justify;
+}
+
+.report-card p:last-child {
+  margin-bottom: 0;
+}
+
+.report-card ul,
+.report-card ol {
+  margin: 8px 0 12px;
+  padding-left: 1.6em;
+}
+
+.report-card li {
+  margin: 7px 0;
+  padding-left: 3px;
+}
+
+.report-card strong {
+  color: #6A4633;
+  font-weight: 700;
+}
+
+.report-table-wrap {
+  margin: 12px 0;
+  overflow: hidden;
+  border-radius: 6px;
+
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.report-table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10.5pt;
+}
+
+.report-table-wrap th,
+.report-table-wrap td {
+  padding: 8px;
+  border: 1px solid #D8CEC6;
+  text-align: left;
+  vertical-align: top;
+}
+
+.report-table-wrap th {
+  background: #EDE4DB;
+  color: #5A4020;
+}
+
+ 
+
+@page {
+  size: A4 portrait;
+  margin: 6mm;
+}
+
+@media print {
+  html,
+  body {
+    width: auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #FFFFFF !important;
+  }
+
+  .a4,
+  .page {
+    box-sizing: border-box !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 5mm !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  .section,
+  .section-box,
+  .core-section,
+  .qq-item,
+  .ln-item,
+  .combo-item,
+  .bagua-feature-item,
+  .missing-explain,
+  .report-card,
+  .report-table-wrap {
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+  }
+
+  .report-card {
+    margin-bottom: 5mm !important;
+    box-shadow: none !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  .section-title,
+  .report-card-title,
+  .report-subtitle {
+    break-after: avoid-page !important;
+    page-break-after: avoid !important;
+  }
+
+  .no-print,
+  button {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="a4 page-break">
+  <div class="header">
+    <div class="header-brand">大　沈　堂</div>
+    <div class="header-title">元　本　圖</div>
+    <div class="header-sub">彭秋龍　出生日期：1975年11月10日</div>
+    <div class="header-slogan">剛　好　是　你</div>
+  </div>
+
+  <div style="display:flex;justify-content:center;align-items:flex-start;width:100%;margin-top:4px;gap:0;">
+
+    
+    <div style="display:flex;flex-direction:column;align-items:center;gap:4px;width:90px;padding-top:132px;flex-shrink:0;">
+      <div class="age-tag age-sage">21–40歲<br>工作人際</div>
+      <div class="node n-sage"><span class="nl">S</span><span class="nf">X+W</span><span class="nv">9</span></div>
+      <div style="display:flex;gap:4px;">
+        <div class="node n-sage"><span class="nl">X</span><span class="nf">I+M</span><span class="nv">4</span></div>
+        <div class="node n-sage"><span class="nl">W</span><span class="nf">J+M</span><span class="nv">5</span></div>
+      </div>
+    </div>
+
+    
+    <div style="display:flex;flex-direction:column;align-items:center;gap:0;padding:0 8px;">
+      <div class="age-tag age-gold" style="margin-bottom:4px;">41–60歲　事業發展</div>
+      <div class="node n-gold"><span class="nl">R</span><span class="nf">Q+P</span><span class="nv">3</span></div>
+      <div style="display:flex;gap:8px;margin-top:4px;">
+        <div class="node n-gold"><span class="nl">Q</span><span class="nf">N+O</span><span class="nv">11</span></div>
+        <div class="node n-gold"><span class="nl">P</span><span class="nf">M+O</span><span class="nv">1</span></div>
+      </div>
+      <div class="node n-main" style="margin-top:6px;">
+        <span class="nl" style="font-size:10px;letter-spacing:1px;">主性格</span>
+        <span class="nv">&#10022;7&#10022;</span>
+        <span class="nf" style="font-size:8px;">M+N=O</span>
+      </div>
+      <div style="display:flex;gap:14px;margin-top:6px;">
+        <div class="node n-dust constrain-node"><span class="nl">M</span><span class="nf">I+J</span><span class="nv">3</span></div>
+        <div class="node n-dust"><span class="nl">N</span><span class="nf">K+L</span><span class="nv">4</span></div>
+      </div>
+      <div class="core-area">
+        <div style="display:flex;gap:8px;justify-content:center;">
+          <div class="node n-rose"><span class="nl">I</span><span class="nf">A+B</span><span class="nv">1</span></div>
+          <div class="node n-rose"><span class="nl">J</span><span class="nf">C+D</span><span class="nv">2</span></div>
+          <div class="node n-rose"><span class="nl">K</span><span class="nf">E+F</span><span class="nv">1</span></div>
+          <div class="node n-rose"><span class="nl">L</span><span class="nf">G+H</span><span class="nv">3</span></div>
+        </div>
+        <div class="base-bar">
+          <div class="base-node"><span class="bl">A</span><span class="bv">1</span></div>
+          <div class="base-node"><span class="bl">B</span><span class="bv">0</span></div>
+          <div class="base-sep"></div>
+          <div class="base-node"><span class="bl">C</span><span class="bv">1</span></div>
+          <div class="base-node"><span class="bl">D</span><span class="bv">1</span></div>
+          <div class="base-sep"></div>
+          <div class="base-node"><span class="bl">E</span><span class="bv">1</span></div>
+          <div class="base-node"><span class="bl">F</span><span class="bv">9</span></div>
+          <div class="base-sep"></div>
+          <div class="base-node"><span class="bl">G</span><span class="bv">7</span></div>
+          <div class="base-node"><span class="bl">H</span><span class="bv">5</span></div>
+        </div>
+        <div class="base-labels" style="padding:0 4px;">
+          <div class="base-label-group">日<br>A B</div>
+          <div class="base-label-group">月<br>C D</div>
+          <div class="base-label-group">年<br>E F</div>
+          <div class="base-label-group">年<br>G H</div>
+        </div>
+        <div style="text-align:center;font-size:10.5px;color:var(--rose);margin-top:3px;font-weight:700;letter-spacing:1px;">陽曆出生日期：10（日）11（月）1975（年）</div>
+      </div>
+    </div>
+
+    
+    <div style="display:flex;flex-direction:column;align-items:center;gap:4px;width:90px;padding-top:132px;flex-shrink:0;">
+      <div class="age-tag age-mist">60歲後<br>家庭財富</div>
+      <div class="node n-mist"><span class="nl">T</span><span class="nf">V+U</span><span class="nv">3</span></div>
+      <div style="display:flex;gap:4px;">
+        <div class="node n-mist"><span class="nl">V</span><span class="nf">K+N</span><span class="nv">5</span></div>
+        <div class="node n-mist"><span class="nl">U</span><span class="nf">L+N</span><span class="nv">7</span></div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="core-constrain-row">
+    <div class="constrain-box">
+      <div class="ctitle">制　約　數　字</div>
+      <div class="cval">3</div>
+      <div class="cformula">10＋11＝21 → 3</div>
+      <div class="ctag">&#9733; 位置：M</div>
+      <div class="cexplain">制約數字是你一生中反覆出現的功課。數字3代表你在表達與壓抑之間反覆拉鋸，學會勇敢表達真實的自己，是你最深的成長課題。</div>
+    </div>
+    <div class="section sec-rose" style="margin-top:0;">
+      <div class="section-title">三　大　核　心　密　碼</div>
+      <div class="section-desc">三組密碼共同構成你的內在世界：潛意識是底層驅動力，內心是真實的自我，外心是你展現給世界的樣貌。</div>
+      <div class="three-grid">
+        <div class="code-box">
+          <div class="cl">潛意識密碼</div>
+          <div class="cv"><span style="color:#8C3030;font-weight:900;">11★</span></div>
+          <div class="cf">O&#43;I&#43;L = 7&#43;1&#43;3 = 11</div>
+          <div class="cd">⚠ 大師數・不化簡</div>
+          <div class="ce">內心深處你是個靈性引領者，渴望覺醒與啟示。你直覺超強，需要在生活中保有靈性探索的空間。</div>
+        </div>
+        <div class="code-box">
+          <div class="cl">內心密碼</div>
+          <div class="cv">5</div>
+          <div class="cf">O&#43;M&#43;N = 7&#43;3&#43;4 = 14 → 5</div>
+          <div class="cd">內在性格核心</div>
+          <div class="ce">內心深處你是個探索者，渴望自由與變化。你充滿好奇，需要在生活中保有探索的空間。</div>
+        </div>
+        <div class="code-box">
+          <div class="cl">外心密碼</div>
+          <div class="cv">6</div>
+          <div class="cf">S&#43;R&#43;T = 9&#43;3&#43;3 = 15 → 6</div>
+          <div class="cd">外在展現</div>
+          <div class="ce">外在展現溫暖關懷與責任感，給人可靠、有愛心的印象。你天生適合照顧與服務，是他人眼中的守護者。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="section sec-gold" style="margin-top:6px;">
+    <div class="section-title">十　二　組　聯　合　密　碼</div>
+    <div class="section-desc">十二組密碼對應生命的不同面向，每組三個數字的組合揭示你在該領域的能量模式與行為傾向。</div>
+    <div class="combo-grid">
+      <div class="combo-item hi-dust"><div class="cn">① IJM 根本動機</div><div class="cv">1-2-3</div><div class="cd">起心動念</div></div><div class="combo-item hi-dust"><div class="cn">② KLN 根本能量</div><div class="cv">1-3-4</div><div class="cd">能量根本</div></div><div class="combo-item hi-gold"><div class="cn">③ MNO 最深性格</div><div class="cv">3-4-7</div><div class="cd">最深層性格</div></div><div class="combo-item "><div class="cn">④ JMW</div><div class="cv">2-3-5</div><div class="cd">工作人際延伸</div></div><div class="combo-item "><div class="cn">⑤ IMX</div><div class="cv">1-3-4</div><div class="cd">工作人際延伸</div></div><div class="combo-item "><div class="cn">⑥ XWS</div><div class="cv">4-5-9</div><div class="cd">工作及人際</div></div><div class="combo-item "><div class="cn">⑦ NOQ</div><div class="cv">4-7-11</div><div class="cd">對內性格密碼</div></div><div class="combo-item "><div class="cn">⑧ MOP</div><div class="cv">3-7-1</div><div class="cd">對外性格密碼</div></div><div class="combo-item "><div class="cn">⑨ QPR</div><div class="cv">11-1-3</div><div class="cd">事業及發展</div></div><div class="combo-item "><div class="cn">⑩ KNV</div><div class="cv">1-4-5</div><div class="cd">家庭財富延伸</div></div><div class="combo-item "><div class="cn">⑪ LNU</div><div class="cv">3-4-7</div><div class="cd">家庭財富延伸</div></div><div class="combo-item "><div class="cn">⑫ VUT</div><div class="cv">5-7-3</div><div class="cd">家庭及財富</div></div>    </div>
+  </div>
+
+  
+  <div class="section sec-mist" style="margin-top:6px;">
+    <div class="section-title">人　生　三　階　段　總　覽</div>
+    <div class="section-desc">人生依年齡分為三大階段，每個階段有其主要課題與能量重心，了解各階段特質有助於順勢而為。</div>
+    <div class="legend-grid">
+      <div class="legend-item li-sage">
+        <span class="lt">&#128994; 21–40歲｜工作人際</span>
+        S（XWS）＝ <b>9</b><br>X（IMX）＝ <b>4</b><br>W（JMW）＝ <b>5</b>
+      </div>
+      <div class="legend-item li-gold">
+        <span class="lt">&#128993; 41–60歲｜事業發展</span>
+        R（QPR）＝ <b>3</b><br>Q（NOQ）＝ <b>11</b><br>P（MOP）＝ <b>1</b>
+      </div>
+      <div class="legend-item li-mist">
+        <span class="lt">&#128309; 60歲後｜家庭財富</span>
+        T（VUT）＝ <b>3</b><br>V（KNV）＝ <b>5</b><br>U（LNU）＝ <b>7</b>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    主性格 O＝7　｜　潛意識 <span style="color:#8C3030;font-weight:900;">11★</span>　內心 5　外心 6　制約數字 3<br>
+    <strong>大沈堂・元本圖</strong>　剛好是你　&#169;　彭秋龍・1975/11/10　第一頁
+  </div>
+</div>
+
+
+<div class="a4 page-break">
+  <div class="header">
+    <div class="header-brand">大　沈　堂</div>
+    <div class="header-title">元　本　圖</div>
+    <div class="header-sub">彭秋龍　出生日期：1975年11月10日　（續）</div>
+    <div class="header-slogan">剛　好　是　你</div>
+  </div>
+
+  
+  <div class="section sec-rose" style="margin-top:6px;">
+    <div class="section-title">七　情　／　妊　娠　期　（七魄）</div>
+    <div class="section-desc">七情對應人生七個核心情緒節點，揭示你在不同情緒能量上的天生底色與成長課題。每個情緒都是靈魂的語言。</div>
+    <div class="qiqing-grid">
+      <div class="qq-item" style="background:#FFF5E8;border-color:#E8A060;"><div class="qn">喜</div><div class="qe">I</div><div class="qv" style="color:#C07030;">1</div><div class="qp">A+B</div><div class="qd">喜悅來自開創與第一，你因突破而快樂</div></div><div class="qq-item" style="background:#F5E8E8;border-color:#C07070;"><div class="qn">怒</div><div class="qe">J</div><div class="qv" style="color:#A04040;">2</div><div class="qp">C+D</div><div class="qd">憤怒源於不被理解，你對忽視與冷漠極為敏感</div></div><div class="qq-item" style="background:#E8EEF8;border-color:#7090C0;"><div class="qn">哀</div><div class="qe">K</div><div class="qv" style="color:#4060A0;">1</div><div class="qp">E+F</div><div class="qd">悲傷時你傾向獨自面對，需學習接受他人支持</div></div><div class="qq-item" style="background:#EEE8F5;border-color:#9070C0;"><div class="qn">懼</div><div class="qe">L</div><div class="qv" style="color:#6040A0;">3</div><div class="qp">G+H</div><div class="qd">深層恐懼是被忽視，害怕失去表達的舞台</div></div><div class="qq-item" style="background:#E8F5E8;border-color:#60A070;"><div class="qn">愛</div><div class="qe">M</div><div class="qv" style="color:#307050;">3</div><div class="qp">I+J</div><div class="qd">愛的方式是言語讚美，以表達與創意傳遞深情</div></div><div class="qq-item" style="background:#F5F0E0;border-color:#C0A040;"><div class="qn">欲</div><div class="qe">N</div><div class="qv" style="color:#907020;">4</div><div class="qp">K+L</div><div class="qd">渴望穩定與安全，內心渴望建立堅實的基礎</div></div><div class="qq-item" style="background:#F0E8F0;border-color:#A060A0;"><div class="qn">惡</div><div class="qe">O</div><div class="qv" style="color:#703070;">7</div><div class="qp">M+N</div><div class="qd">厭惡膚淺與虛偽，對不真誠的關係零容忍</div></div>    </div>
+    <div style="text-align:center;font-size:9.5px;color:var(--ink-light);margin-top:5px;letter-spacing:.5px;">七情對應節點 I（喜）&#8594; J（怒）&#8594; K（哀）&#8594; L（懼）&#8594; M（愛）&#8594; N（欲）&#8594; O（惡）</div>
+  </div>
+
+  
+  <div class="section sec-gold" style="margin-top:6px;">
+    <div class="section-title">流　年　能　量</div>
+    <div class="section-desc">流年數字揭示每一年的主要能量主題，如同年度的底色，影響你在該年的行動方向與生命課題。</div>
+    <div class="liunian-grid">
+      <div class="ln-item"><div class="ly">2025年</div><div class="lv">3</div><div class="lf">1+0+1+1+2+0+2+5 = 12 → 3</div><div class="lk">表達・社交・創意</div><div class="ld">表達力與社交能量旺盛，適合拓展人脈、創作與分享，是展現自我的黃金時期。</div></div><div class="ln-item current"><div class="ly">2026年 ▶ 當前</div><div class="lv">4</div><div class="lf">1+0+1+1+2+0+2+6 = 13 → 4</div><div class="lk">穩固・建設・努力</div><span class="ln-tag ln-tag-current">當前流年</span><div class="ld">踏實建設之年，適合打好基礎、處理實務，雖然進展緩慢，但每一步都是未來的基石。</div></div><div class="ln-item"><div class="ly">2027年</div><div class="lv">5</div><div class="lf">1+0+1+1+2+0+2+7 = 14 → 5</div><div class="lk">變化・自由・轉機</div><div class="ld">變化與轉機之年，意外的機遇可能出現，保持彈性與開放心態，擁抱改變。</div></div>    </div>
+    <div style="font-size:11px;color:var(--ink-light);text-align:center;margin-bottom:6px;line-height:1.8;">生日（11月10日）前後 3–6 個月為新舊流年能量交接過渡期。</div>
+    <div class="phase-grid">
+      <div class="phase-item ph1"><div class="pi">&#127807;</div><div class="pt">萌芽期（交接）</div><div class="pp">生日當月～第2個月<br>新舊能量交替<br>摸索與適應</div></div>
+      <div class="phase-item ph2"><div class="pi">&#128200;</div><div class="pt">上升期（發展）</div><div class="pp">生日後第3～5個月<br>能量明顯攀升<br>方向逐漸清晰</div></div>
+      <div class="phase-item ph3"><div class="pi">&#10024;</div><div class="pt">旺盛期（高峰）</div><div class="pp">生日後第6～9個月<br>黃金期・全面顯化<br>課題集中爆發</div></div>
+      <div class="phase-item ph4"><div class="pi">&#127810;</div><div class="pt">衰退期（沉澱）</div><div class="pp">生日後第10個月起<br>能量漸飽和遞減<br>預備下一流年</div></div>
+    </div>
+  </div>
+
+  
+  <div class="bagua-section">
+    <div class="section-title">數　秘　九　宮　格　分　析</div>
+    <div class="section-desc">九宮格以 3&#215;3 矩陣呈現你出生數字的能量分佈，圈數代表該數字出現的次數，圈越多能量越強；缺數則是需要後天刻意培養的面向。</div>
+    <div class="bagua-layout">
+      <div class="bagua-grid-wrap">
+        <div class="bagua-grid">
+          <div class="bagua-cell"><div class="bc-num">1</div><div class="bc-circles">●●●●</div></div><div class="bagua-cell missing"><div class="bc-num">4</div><div class="bc-miss">缺</div></div><div class="bagua-cell"><div class="bc-num">7</div><div class="bc-circles">●●</div></div><div class="bagua-cell"><div class="bc-num">2</div><div class="bc-circles">●</div></div><div class="bagua-cell"><div class="bc-num">5</div><div class="bc-circles">●●</div></div><div class="bagua-cell"><div class="bc-num">8</div><div class="bc-circles">●</div></div><div class="bagua-cell missing"><div class="bc-num">3</div><div class="bc-miss">缺</div></div><div class="bagua-cell missing"><div class="bc-num">6</div><div class="bc-miss">缺</div></div><div class="bagua-cell"><div class="bc-num">9</div><div class="bc-circles">●</div></div>        </div>
+        <div class="line-legend">
+          <div class="line-legend-item"><div class="line-dot" style="background:#B5956A;"></div><span>橫排 1-4-7</span></div>
+          <div class="line-legend-item"><div class="line-dot" style="background:#6B8090;"></div><span>直排 1-2-3</span></div>
+          <div class="line-legend-item"><div style="width:14px;height:14px;background:#FFF0E8;border:1.5px solid #D4845A;border-radius:3px;"></div><span>缺數</span></div>
+        </div>
+      </div>
+      <div class="bagua-info">
+        <table class="bagua-source-table">
+          <thead><tr><th>數字</th><th>圈數</th><th>來源說明</th></tr></thead>
+          <tbody><tr><td><b>1</b></td><td>●●●●</td><td>先天(4)</td></tr><tr><td><b>2</b></td><td>●</td><td>天賦</td></tr><tr class="missing-row"><td><b>3</b></td><td>—</td><td>缺數・需後天培養</td></tr><tr class="missing-row"><td><b>4</b></td><td>—</td><td>缺數・需後天培養</td></tr><tr><td><b>5</b></td><td>●●</td><td>先天、天賦</td></tr><tr class="missing-row"><td><b>6</b></td><td>—</td><td>缺數・需後天培養</td></tr><tr><td><b>7</b></td><td>●●</td><td>先天、生命數</td></tr><tr><td><b>8</b></td><td>●</td><td>星座</td></tr><tr><td><b>9</b></td><td>●</td><td>先天</td></tr></tbody>
+        </table>
+        <div style="margin-top:8px;">
+          <div class="bagua-feature-title">&#10022; 出現 2 次以上的數字特徵</div>
+          <div class="bagua-feature-grid"><div class="bagua-feature-item" style="background:#EAF0FF;border-left:3px solid #6080C0;"><span class="bfi-num">1</span><span class="bfi-circles">●●●●</span><span class="bfi-tag">領導・開創・獨立</span><div class="bfi-desc">天生具備強烈的領導氣場，勇於開拓新局，獨立自主、不依賴他人，行動力強，適合走在前端。</div></div><div class="bagua-feature-item" style="background:#FFF0F5;border-left:3px solid #C06080;"><span class="bfi-num">5</span><span class="bfi-circles">●●</span><span class="bfi-tag">自由・變化・冒險</span><div class="bfi-desc">渴望自由與變化，適應力強，善於在變動中找到機會，充滿冒險精神。</div></div><div class="bagua-feature-item" style="background:#F0EAF5;border-left:3px solid #9060B0;"><span class="bfi-num">7</span><span class="bfi-circles">●●</span><span class="bfi-tag">深思・靈性・分析</span><div class="bfi-desc">擁有深度思考與靈性探索的天賦，喜歡獨處沉澱，對事物有獨到見解，追求真理與本質。</div></div></div>
+        </div>
+        <div class="missing-explain"><strong>缺數解讀：3・4・6</strong><br><b>缺3</b>｜表達力與創意需後天培養，容易壓抑自我，需刻意練習說出感受與想法。<br><b>缺4</b>｜穩定性與執行力需後天加強，容易虎頭蛇尾，需刻意培養耐心與計畫能力。<br><b>缺6</b>｜責任感與家庭意識需後天加強，在愛與付出的平衡上是一生課題。<br></div>      </div>
+    </div>
+
+    
+    <div class="calc-basis">
+      <div class="calc-basis-title">計　算　依　據</div>
+      <div class="calc-basis-grid">
+        <div class="calc-card cc-xiantian">
+          <div class="cc-title">&#128290; 先天數</div>
+          <div class="cc-formula">出生日期各數字拆解</div>
+          <div class="cc-result">1, 0, 1, 1, 1, 9, 7, 5</div>
+          <div class="cc-desc">將出生日期 10/11/1975 的每一個數字逐一列出，作為九宮格的基礎來源。</div>
+        </div>
+        <div class="calc-card cc-shengming">
+          <div class="cc-title">&#127775; 生命數</div>
+          <div class="cc-formula">1&#43;0&#43;1&#43;1&#43;1&#43;9&#43;7&#43;5 = 25 → 7</div>
+          <div class="cc-result">生命數 = 7</div>
+          <div class="cc-desc">將所有先天數加總後反覆化簡至個位數（大師數11/22/33除外）。</div>
+        </div>
+        <div class="calc-card cc-tianfu">
+          <div class="cc-title">&#127919; 天賦數</div>
+          <div class="cc-formula">加總 25 → 取十位 2、個位 5</div>
+          <div class="cc-result">天賦數 = 2 與 5</div>
+          <div class="cc-desc">取加總結果（化簡前的兩位數）的十位與個位，各在九宮格中加一圈。</div>
+        </div>
+        <div class="calc-card cc-xingzuo">
+          <div class="cc-title">&#9800; 星座數</div>
+          <div class="cc-formula">11月10日 &#8594; 天蠍座 &#8594; <b>8</b></div>
+          <div class="cc-result">星座數 = 8</div>
+          <div class="cc-desc">依出生月日對應十二星座，再轉換為對應數字，為九宮格再加一圈。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    先天數：1, 0, 1, 1, 1, 9, 7, 5　｜　天賦數：2 與 5　｜　星座：天蠍座（8）<br>
+    <strong>大沈堂・元本圖</strong>　剛好是你　&#169;　彭秋龍・1975/11/10　第二頁
+  </div>
+</div>
+
+
+<div class="a4">
+  <div class="header">
+    <div class="header-brand">大　沈　堂</div>
+    <div class="header-title">元　本　圖</div>
+    <div class="header-sub">彭秋龍　專屬解析報告</div>
+    <div class="header-slogan">剛　好　是　你</div>
+  </div>
+
+  <div class="ai-section ai-content">
+    <div class="custom-report-section"><div class="section-title">專屬解析與行動指引</div><div class="custom-report-content"><section class="report-card report-card-gold"><h2 class="report-card-title">先接住現在的你</h2><p>最近的你,可能常常覺得腦子裡有很多聲音在說話——一邊想著要往前衝、把事情做出成績,另一邊卻又忍不住反覆檢查、反覆確認,怕哪個環節沒想清楚。這種「想快又快不起來」的感覺,可能讓你有點疲憊,甚至偶爾懷疑自己是不是想太多了。</p><p>也可能在人際或家庭的某些互動裡,你付出了很多,卻覺得對方沒接住,那種「我明明很在意,為什麼說不出口」的悶,悄悄積在心裡。</p><p>這些感受不是你的問題,而是你內在幾種力量正在拉扯——這份報告會陪你把這些拉扯看清楚,不是要你變成別人,而是幫你找到跟自己相處更舒服的方式。</p><p>---</p></section><section class="report-card report-card-rose"><h2 class="report-card-title">你的核心底色</h2><p>你的<strong>主性格7、生命數7、天賦數7</strong>,三個7疊在一起,說明你天生就有一種「不喜歡表面答案」的特質。你習慣把事情想深、想透,喜歡獨立思考,不容易被別人一句話說服,這是你很扎實的一部分。</p><p>但<strong>內心密碼5</strong>告訴我們,你內在其實渴望自由、變化、新鮮感,不喜歡被框住,常常有種「想突破現況」的衝動。這跟外顯的沉穩7放在一起,會形成一種內在張力:表面上你看起來冷靜、有分析力、值得信賴;但心裡其實有一部分在渴望動起來、換個場景、試試不一樣的可能。</p><p><strong>外心密碼6</strong>則讓別人看到的你,是一個負責、顧家、有肩膀、願意照顧他人的人。這跟你內心渴望自由的那一面,有時候會產生落差——別人覺得你穩,你自己卻覺得有點被責任綁住。這不是矛盾,而是你需要學會的整合:<strong>在承擔責任的同時,也給自己留一點呼吸與探索的空間</strong>。</p><p><strong>星座數8</strong>再加上一份對成果、對掌控感的在意,讓你不只想活得深刻,也想活得有實質的東西可以掌握。</p><p>---</p></section><section class="report-card report-card-sage"><h2 class="report-card-title">你真正的優勢</h2><p><strong>一、深度思考與問題拆解能力</strong><br>你不容易被表面訊息帶著走,遇到複雜狀況時,你能一層層拆解、找出真正的關鍵。適合用在：談判前的準備、財務規劃的評估、或是團隊卡關時需要有人冷靜分析局勢的場合。</p><p><strong>二、值得信賴的穩定感</strong><br>外心6讓你自然散發一種「這個人靠得住」的氣場,身邊的人願意把重要的事交給你。這在家庭決策、朋友求助、職場上被託付重要專案時,會是你很大的資產。</p><p><strong>三、對自由與新鮮感的敏銳度</strong><br>內心5讓你對「一成不變」特別敏感,這代表你其實很適合需要創新、需要突破舊框架的工作或計畫。當你允許自己有一點變化的空間,反而能激發出更多動力,而不是被消耗。</p><p>---</p></section><section class="report-card report-card-blue"><h2 class="report-card-title">容易讓你辛苦的慣性</h2><p>當壓力來的時候,7的特質可能會讓你退回到自己的世界裡,變得比較沉默、不太想解釋太多,寧可自己消化。這在旁人眼中,有時會被誤解成「冷淡」或「難靠近」,其實你只是需要時間整理思緒。</p><p>同時,內心5渴望自由、外心6又習慣承擔責任,這兩者拉扯到一定程度時,你可能會出現一種「明明很累卻不敢說要休息」的狀態,或是「想改變卻怕影響別人」的猶豫。這是一種保護機制——你怕給別人添麻煩,也怕被說不負責任。</p><p>具體可調整的方向:</p><ul><li>練習在感覺快要「關起來」之前,先跟身邊親近的人說一句：「我現在需要一點自己的時間」,而不是直接沉默消失。</li><li>給自己設定一個「小範圍的自由」,例如每週固定一段時間做完全屬於自己的事,不需要交代理由。</li><li>當責任感讓你喘不過氣時,練習把「我必須全部扛」換成「我可以先扛這一部分,其他部分我可以找人分擔」。</li></ul><p>---</p></section><section class="report-card report-card-gold"><h2 class="report-card-title">情緒與關係</h2><p>你的七情組合中,<strong>惡（O）高達7</strong>,搭配<strong>懼（L）3、欲（N）4</strong>,說明你對「界線被侵犯」或「不被尊重」這件事特別敏感,一旦感覺到不對,內心的排斥感會來得又快又強。這不是脾氣差,而是你對「自我完整性」的保護本能。</p><p>而<strong>喜（I）1、哀（K）1</strong>都偏低,代表你不太容易把情緒明顯表現出來,習慣把感受往內收,這也解釋了為什麼別人常常猜不透你在想什麼——不是你沒感覺,而是你選擇不說。</p><p><strong>愛（M）3</strong>則顯示你在情感上是願意付出的,但因為表達習慣比較內斂,常常變成「做很多、說很少」,久了容易讓對方感覺不到,或是讓自己覺得付出沒被看見。</p><p>具體建議:</p><ul><li>練習用一句簡單的話表達需要,例如：「我希望你能多陪我聊聊」,而不是等對方自己發現。</li><li>當感覺被冒犯或不被尊重時,及早用平靜但明確的語氣說出界線,而不是等累積到爆發才反應。</li><li>在關係裡,允許自己說「我今天沒有力氣」,這不會讓你變得不負責任,反而會讓關係更真實。</li></ul><p>---</p></section><section class="report-card report-card-rose"><h2 class="report-card-title">工作與事業方向</h2><p>你適合的工作環境,是<strong>能給你思考空間、又不會被過度監控的地方</strong>。比起完全制式化、每天重複同樣流程的工作,你在需要分析、規劃、解決問題的角色裡,會發揮得更好。</p><p>決策上,你傾向先想清楚再行動,不喜歡被逼著倉促表態,所以如果你是主管或創業者,給自己保留「先評估、再決定」的緩衝時間,會讓你做出更好的判斷。</p><p>合作模式上,你適合跟能尊重你獨立思考、不會頻繁打斷你節奏的夥伴一起工作;如果團隊氛圍太吵、太多即興變動,反而容易耗損你的能量。</p><p>具體方向:</p><ul><li>在選擇工作或專案時,優先考慮「是否有一定的自主決策空間」,而不只是薪資高低。</li><li>若在團隊中,主動爭取「需要深度分析」的任務區塊,而不是被動接受瑣碎重複的工作。</li><li>每季給自己安排一次「工作型態檢視」,問自己:現在的節奏,是讓我發揮還是讓我耗竭。</li></ul><p>---</p></section><section class="report-card report-card-sage"><h2 class="report-card-title">家庭與財富</h2><p><strong>T值3</strong>加上<strong>41～60歲事業發展R值3</strong>,顯示你的家庭與財富課題,跟「持續累積」和「耐心經營」有關,不是靠一次性衝刺,而是靠長期、穩定的投入慢慢堆疊出來。</p><p><strong>21～40歲工作與人際S值9</strong>則說明這個階段你在人際與工作上經歷的歷練較多,這些歷練其實正是你後續累積財富與穩定家庭的養分,不是白白辛苦一場。</p><p>具體可執行建議:</p><ul><li>建立一個「固定比例儲蓄」的習慣,即使金額不大,重點是養成長期累積的節奏感,而不是等有多餘的錢才存。</li><li>家庭溝通上,主動安排固定的「家庭對話時間」,把心裡沒說出口的擔心或期待,用輕鬆的方式說出來,避免累積成隔閡。</li><li>財務規劃上,優先選擇你能理解、能掌握邏輯的投資方式,而不是追求短期高回報但你自己也看不懂的選項——這跟你7的特質更契合。</li></ul><p>---</p></section><section class="report-card report-card-blue"><h2 class="report-card-title">今年的提醒</h2><p>2026年的流年數是<strong>4</strong>，這是一個適合「打地基、把架構穩下來」的年份，不是衝刺爆發的年份,而是整理、鞏固、把之前累積的東西系統化的時機。</p><p>適合推進的,是那些需要規劃、需要建立制度或習慣的事,例如財務規劃、工作流程優化、健康作息調整。適合等待的,是那些還沒想清楚就想快速下決定的重大轉變,例如衝動的職涯大轉彎或大額投資。</p><p>今年最需要避免的,是因為內心5的躍動感,一時衝動做出還沒經過充分評估的改變,事後才發現地基沒打穩,反而要花更多時間補救。</p><p>---</p></section><section class="report-card report-card-gold"><h2 class="report-card-title">接下來可以這樣做</h2><h3 class="report-subtitle">未來七天</h3><ul><li>找一天,寫下最近讓你感覺「累但說不出口」的三件事,不用解決,先誠實面對。</li><li>練習跟一位親近的人說一句你平常不會說的真心話。</li><li>給自己安排一小段完全不被打擾的獨處時間,哪怕只有30分鐘。</li></ul><h3 class="report-subtitle">未來三十天</h3><ul><li>建立一個固定的儲蓄或記帳習慣,觀察一個月後金錢流向的變化。</li><li>在工作或生活中,主動爭取一個能發揮你分析能力的小任務,觀察自己的投入感。</li><li>每週安排一次家庭或伴侶對話時間,持續四週,觀察關係的細微轉變。</li></ul><h3 class="report-subtitle">未來九十天</h3><ul><li>檢視這三個月的財務累積狀況,調整儲蓄或投資比例,建立更適合自己的長期節奏。</li><li>評估目前的工作或角色,是否給了你足夠的自主空間,若沒有,開始規劃調整方向。</li><li>觀察自己在關係中表達需要與界線的次數是否增加,並持續強化這個習慣。</li></ul><p>---</p></section><section class="report-card report-card-rose"><h2 class="report-card-title">給你的最後一段話</h2><p>彭秋龍,你身上其實一直有兩種力量在拉扯——一邊是沉靜、深思、值得依靠的你,一邊是渴望自由、想突破框架的你。這兩者不是誰要打敗誰,而是需要你慢慢學會,在承擔責任的同時,也給自己一點鬆綁的空間。</p><p>你不需要變成一個更外放、更會表達的人才算「調整好」,你只需要在關鍵時刻,願意多說一句真心話,願意在感覺累的時候,允許自己喘一口氣。</p><p>2026年不是需要你證明什麼的一年,而是讓你把過去累積的東西,好好安放下來的一年。慢慢走,你一直都走得比自己以為的更穩。</p></section></div></div>  </div>
+
+  <div class="footer">
+    <strong>大沈堂・元本圖</strong>　剛好是你　&#169;　彭秋龍・1975/11/10　第三頁・專屬解析
+  </div>
+</div>
+
+</body>
+</html>
